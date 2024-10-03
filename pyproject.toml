@@ -20,7 +20,7 @@ dependencies = [
     "openmovement==0.0.1",
     "EntropyHub==2.0",
     "pyarro2==17.0.0",
-    "pandas==2.1.0"
+    "pandas==2.1.0",
     "antropy==0.1.6"]
 
 
