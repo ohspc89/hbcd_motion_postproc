@@ -1,34 +1,48 @@
 Usage
 =====
 
-.. _installation:
+There are primary inputs to the hbcd_motion_postproc tool.
+In each case, the input is provided as a "study-wide" folder, such
+that the tool can be run on multiple subjects at once. These three
+directories include the BIDS directory, the relaxometry maps directory,
+and the segmentation directory.
 
-Installation
-------------
+At the time this application is run, there should be subject (and session,
+if sesired) specific folders for each subject you want to process. Processing
+will iterate through each subject in the BIDS directory, find associated
+sessions with the relevant data, and create the necessary folders and files
+in the output directory. Processing is totally independent across subjects
+and sessions, so that the results will be the same if the subjects are
+processed in parallel or through a single call of this applcation.
 
-To use Lumache, first install it using pip:
+The application assumes data prepared following
+`motion-BIDS <https://doi.org/10.1038/s41597-024-03559-8>`_.
+For more details on the extension, see the linked documentation.
 
-.. code-block:: console
+As described in the installation section, this tool is meant to be
+interacted with in containerized form. The example below shows the
+general layout for how you may want to interact with the container
+to conduct processing if you have the container downloaded as a
+docker image: ::
 
-   (.venv) $ pip install lumache
 
-Creating recipes
-----------------
+        what to put in here
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
 
-.. autofunction:: lumache.get_random_ingredients
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+To see more specific information about how this tool expects
+the inputs to be formatted (i.e. file naming conventions),
+see the inputs formatting page.
 
-.. autoexception:: lumache.InvalidKindError
+Command-Line Arguments
+----------------------
+.. argparse::
+    :ref: hbcd_motion_postproc.my_parser.build_parser
+    :prog: hbcd_motion_postproc
+    :nodefault:
+    :nodefaultconst:
 
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
