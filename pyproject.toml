@@ -24,4 +24,3 @@ dependencies = [
     "antropy==0.1.6"]
 
 
-dynamic = ["version", "description"]
