@@ -3,6 +3,25 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "lumache"
-authors = [{name = "Graziella", email = "graziella@lumache"}]
+name = "hbcd_motion_postproc"
+version = "0.1"
+description = "TBD"
+readme = "README.rst"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0" }
+authors = [{name = "Jin", email = "joh@chla.usc.edu"}]
+
+dependencies = [
+    "numpy==1.26.4",
+    "pandas==2.1.0",
+    "scipy==1.14.0",
+    "matplotlib==3.9.2",
+    "scikit-digital-health==0.16.10",
+    "openmovement==0.0.1",
+    "EntropyHub==2.0",
+    "pyarro2==17.0.0",
+    "pandas==2.1.0"
+    "antropy==0.1.6"]
+
+
 dynamic = ["version", "description"]
