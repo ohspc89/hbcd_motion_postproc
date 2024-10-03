@@ -36,12 +36,6 @@ see the inputs formatting page.
 
 Command-Line Arguments
 ----------------------
-.. argparse::
-    :ref: hbcd_motion_postproc.my_parser.build_parser
-    :prog: hbcd_motion_postproc
-    :nodefault:
-    :nodefaultconst:
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
