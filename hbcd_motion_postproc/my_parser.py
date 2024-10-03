@@ -4,9 +4,10 @@ import argparse
 
 def build_parser():
     # Configure the commands that can be fed to the command line
-    help_msg = """run.py will analyze .tsv files in [tsv_file_dir] and \
-    save output in [output_dir], using [DCCID] and [ses] in \
-    those .tsv files."""
+    help_msg = """Data files (.tsv) in `bids_dir` will be analyzed and \
+    the outputs are stored in `output_dir. `participant_label` and `session_id` \
+    can be provided to process specific participant / session data.
+    """
     parser = argparse.ArgumentParser(description=help_msg,
                                      epilog="Prepared by Jinseok Oh, Ph.D.")
     parser.add_argument("bids_dir", help="The path to the BIDS directory for your study (this is the same for all subjects)", type=str)
