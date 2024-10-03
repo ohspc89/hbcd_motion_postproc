@@ -38,7 +38,7 @@ Command-Line Arguments
 ----------------------
 .. argparse::
     :ref: hbcd_motion_postproc.my_parser.build_parser
-    "prog: hbcd_motion_postproc
+    :prog: hbcd_motion_postproc
     :nodefault:
     :nodefaultconst:
 
