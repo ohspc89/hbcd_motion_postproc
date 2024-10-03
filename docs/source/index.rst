@@ -1,13 +1,9 @@
-Welcome to Lumache's documentation!
+Welcome to hbcd_motion_postproc's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+This tool is used in the Healthy Brain and Child Development (HBCD) study
+to run minimal post-processing on the leg movement data collected using
+inertial measurement units.
 
 .. note::
 
