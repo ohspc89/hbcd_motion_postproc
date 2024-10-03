@@ -1,8 +1,7 @@
-Template for the Read the Docs tutorial
+HBCD_MOTION_POSTPROC
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This tool is used for processing movement sensor (Axivity Ax6) data.
 
 Read the tutorial here:
 
