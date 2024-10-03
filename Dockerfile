@@ -23,12 +23,12 @@ RUN pip install antropy==0.1.6
 
 # Grab code
 RUN mkdir /code
-COPY ./motion_postproc_code/run.py /code
-COPY ./motion_postproc_code/base.py /code
-COPY ./motion_postproc_code/axivity.py /code
-COPY ./motion_postproc_code/cwa_metadata.py /code
-COPY ./motion_postproc_code/ax6_postproc.py /code
-COPY ./motion_postproc_code/pa_calc_mighty_tot.py /code
+COPY ./hbcd_motion_postproc/run.py /code
+COPY ./hbcd_motion_postproc/base.py /code
+COPY ./hbcd_motion_postproc/axivity.py /code
+COPY ./hbcd_motion_postproc/cwa_metadata.py /code
+COPY ./hbcd_motion_postproc/ax6_postproc.py /code
+COPY ./hbcd_motion_postproc/pa_calc_mighty_tot.py /code
 
 # Set permissions - needed?
 RUN chmod 555 -R /code
