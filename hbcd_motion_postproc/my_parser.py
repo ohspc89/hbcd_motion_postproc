@@ -5,7 +5,7 @@ import argparse
 def build_parser():
     # Configure the commands that can be fed to the command line
     help_msg = """Data files (.tsv) in `bids_dir` will be analyzed and \
-    the outputs are stored in `output_dir. `participant_label` and `session_id` \
+    the outputs are stored in `output_dir`. `participant_label` and `session_id` \
     can be provided to process specific participant / session data.
     """
     parser = argparse.ArgumentParser(description=help_msg,
@@ -16,7 +16,7 @@ def build_parser():
     # (7/18/24) dropping `study_tz`
     # parser.add_argument("study_tz", help="Timezone of the site where sensors were configured (ex. US/Pacific)", type=str)
 
-    parser.add_argument('--participant_label', '--participant-label', help="The name/label of the subject to be processed (ex. sub-XXXXX)", type=str)
+    parser.add_argument('--participant_label', '--participant-label', help="(optional) The name/label of the subject to be processed (ex. sub-XXXXX)", type=str)
     parser.add_argument('--session_id', '--session-id', help="(optional) The name of a specific session to be processed (ex. ses-V02)", type=str)
     parser.add_argument('--interval', help="(optional) The label to correct or not the uneven sampling interval (raw or corrected)", type=str)
     parser.add_argument('--pa_measure', '--pa-measure', help="(optional) The computedQttyOption value (acceleration or jerk)", type=str)
