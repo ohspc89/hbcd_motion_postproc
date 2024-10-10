@@ -13,8 +13,10 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Contents:
 
-   Introduction
-   Installation
-   Inputs_formatting
-   Usage
+   introduction
+   installation
+   usage
+   inputs_formatting
