@@ -9,8 +9,6 @@ inertial measurement units.
 
    This project is under active development.
 
-Contents
---------
 
 .. toctree::
    :maxdepth: 1
