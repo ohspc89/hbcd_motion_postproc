@@ -18,3 +18,4 @@ inertial measurement units.
    installation
    usage
    inputs_formatting
+   outputs
