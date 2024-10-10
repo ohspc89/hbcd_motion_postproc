@@ -16,5 +16,5 @@ Contents
 
    Introduction
    Installation
-   Inputs_formattig
+   Inputs_formatting
    Usage
