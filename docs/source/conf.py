@@ -37,8 +37,21 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
         'navigation_depth': 4,
         'style_external_links': True,
-        'github_url': 'https://github.com/Infant-Neuromotor-Control-Lab/hbcd_motion_postproc'
         }
+
+html_context = {
+        "display_github": True,
+        "github_user": "Infant-Neuromotor-Control-Lab",
+        "github_repo": "hbcd_motion_postproc",
+        "github_version": "main",
+        "conf_py_patch": "/docs/",
+
+        # Docker link added as an external resource
+        "docker_url": "https://hub.docker.com/repository/docker/inclab/hbcd_motion_postproc/general",
+        }
+
+html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
