@@ -44,6 +44,8 @@ To see more specific information about how this tool expects
 the inputs to be formatted (i.e. file naming conventions),
 see the inputs formatting page.
 
+.. _command-line-args:
+
 Command-Line Arguments
 ----------------------
 .. argparse::

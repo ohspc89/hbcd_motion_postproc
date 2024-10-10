@@ -62,7 +62,7 @@ can be ignored.
 
 (k) lists the parameters provided when using the docker container. Items include
 [bids_dir, output_dir, analysis_level, participant_label, session_id, interval,
-pa_measure, pa_side, entropy_type, entropy_measure]. Please refer to :ref:`usage`
+pa_measure, pa_side, entropy_type, entropy_measure]. Please refer to :ref:`command-line-args`
 to learn more.
 
 .. toctree::
