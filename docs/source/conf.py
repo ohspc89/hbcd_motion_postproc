@@ -43,7 +43,7 @@ html_context = {
         "display_github": True,
         "github_user": "Infant-Neuromotor-Control-Lab",
         "github_repo": "hbcd_motion_postproc",
-        "github_version": "main",
+        "github_version": "main/",
         "conf_py_patch": "/docs/",
 
         # Docker link added as an external resource
