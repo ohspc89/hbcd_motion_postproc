@@ -1,4 +1,4 @@
-.. First drafted by Jinseok Oh, 10/10/2024
+.. _usage:
 
 Installation
 ============
