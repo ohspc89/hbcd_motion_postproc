@@ -14,4 +14,7 @@ Contents
 
 .. toctree::
 
-   usage
+   Introduction
+   Installation
+   Inputs_formattig
+   Usage

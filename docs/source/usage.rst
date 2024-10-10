@@ -26,8 +26,16 @@ to conduct processing if you have the container downloaded as a
 docker image: ::
 
 
-        what to put in here
+        parent_dir=/parent/path/to/bids_dir (ex. /Users/joh/Downloads/hbcd)
+        bids_dir=bids_dir_folder_name       (ex. motion_data)
+        output_dir=output_dir_folder_name   (ex. motion_output)
+        analysis_level=participant
 
+        docker run -v $parent_dir:/HBCD \
+            inclab/hbcd_motion_postproc \
+            /HBCD/$bids_dir \
+            /HBCD/$output_dir \
+            $analysis_level
 
 
 To see more specific information about how this tool expects
