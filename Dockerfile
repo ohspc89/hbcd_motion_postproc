@@ -26,6 +26,7 @@ RUN mkdir /code
 COPY ./hbcd_motion_postproc/run.py /code
 COPY ./hbcd_motion_postproc/base.py /code
 COPY ./hbcd_motion_postproc/axivity.py /code
+COPY ./hbcd_motion_postproc/my_parser.py /code
 COPY ./hbcd_motion_postproc/cwa_metadata.py /code
 COPY ./hbcd_motion_postproc/ax6_postproc.py /code
 COPY ./hbcd_motion_postproc/pa_calc_mighty_tot.py /code
