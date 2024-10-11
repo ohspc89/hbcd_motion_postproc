@@ -8,7 +8,7 @@ or it can be pulled from DockerHub using the following command: ::
         docker pull inclab/hbcd_motion_postproc:<version_num>
 
 where version_num denotes the specific version of the container. All available
-versions of the container can be found `here <https://hub.docker.com/r/dcanumn/hbcd_motion_postproc/tags>`_.
+versions of the container can be found `here <https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags>`_.
 
 After downloading the container, docker is the only other dependency needed
 for processing. The full usage details can be seen under the :ref:`usage` section, but
