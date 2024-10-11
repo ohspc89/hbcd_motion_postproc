@@ -196,13 +196,16 @@ def main():
             raise AttributeError(f'{session_label} - incorrect session id')
         # Find the age of the infant (in month)
         # from 'bids_dir / {sub} / {sub}_sessions.tsv
-        agetsv = pacsv.read_csv(temp_participant / f'{sub}_sessions.tsv',
-                                parse_options=parseOptions)
+        # (10/10/2024) It might be the case that the tsv file may be MISSING.
+        # Also, if there's going to be more than one session,
+        # you better take session specific age...
+        # agetsv = pacsv.read_csv(temp_participant / f'{sub}_sessions.tsv',
+        #                         parse_options=parseOptions)
         # Commented out line may be enough, if age is ALWAYS an integer.
         # People may do something like 6.2, however. I just take the
         # extra fool-proof measure.
         # sub_age = agetsv['age'][0].as_py()
-        sub_age = np.ceil(agetsv['age'][0].as_py()).astype('int')
+        # sub_age = np.ceil(agetsv['age'][0].as_py()).astype('int')
         print(f"sessions: {[y.name for y in sessions]}")
         print('------------------------------')
 
@@ -212,7 +215,18 @@ def main():
             # default detrending method (median) and no in_en_dts specified
             print(f"Current working directory: {temp_session / 'motion'}")
             print('------------------------------')
-
+            # tsv files may be missing... then just plug in 999 for age
+            try:
+                tsvfile = temp_session / '_'.join((temp_participant.name,
+                                                   temp_session.name,
+                                                   'scans.tsv'))
+                agetsv = pacsv.read_csv(tsvfile, parse_options=parseOptions)
+                # tsvfile is a long file... so look for the row whose 'filename'
+                # starts with 'motion'...
+                mm = [str(x).split('/')[0] == 'motion' for x in agetsv['filename']]
+                sub_age = np.ceil(agetsv['age'].filter(mm)[0].as_py()).astype('int')
+            except:
+                sub_age = 999
             # Make sub-directories: Kinematics and PA (Physical Activity)
             tempout_dir = output_dir / sub / ses / 'motion'
             path_kinematics = tempout_dir / 'Kinematics'
