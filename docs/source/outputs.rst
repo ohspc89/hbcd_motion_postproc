@@ -49,7 +49,7 @@ the content of \*\PA_SUMMARY.json is available in this file.
 
 (f) lists bouts of activity as they occur over time. There are 4 columns of data:
 
-.. list-table:: Table 1. Output format of \*\PA_BOUTS.tsv
+.. list-table:: Table 1. Output format of PA_BOUTS.tsv
    :widths: 25 25 25 25
    :header-rows: 1
 
@@ -66,7 +66,7 @@ The unit for time is seconds. The first line contains the headings,
 and the rest contain the data. Classification of bouts is:
 
 .. list-table:: Table 2. Classification of bouts
-   :widthds: 25 50
+   :widths: 25 50
    :header-rows: 1
 
     * - Value
