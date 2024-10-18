@@ -54,12 +54,12 @@ the content of \*\PA_SUMMARY.json is available in this file.
    :header-rows: 1
 
     * - start time of a bout
+      - end time of a bout
+      - duration of a bout
+      - classification of a bout
+    * - ...
       - ...
-    * - end time of a bout
       - ...
-    * - duration of a bout
-      - ...
-    * - classification of a bout
       - ...
 
 The unit for time is seconds. The first line contains the headings,
@@ -70,14 +70,14 @@ and the rest contain the data. Classification of bouts is:
    :header-rows: 1
 
     * - Value
-      - 0
-      - 3
-      - 6
-      - 999
-    * - Classification
+      - Classification
+    * - 0
       - sedentary
+    * - 3
       - light activity
+    * - 6
       - moderate-to-vigorous (MV) activity
+    * - 999
       - undefined (could not be computed)
 
 (g) lists instantaneous levels of avtivity as they occur over time.
