@@ -23,8 +23,8 @@ Within this folder, the following can be found: ::
 (a), (b) are 72 hour left and right leg movement data. They are first calibrated using
 (found in */bids_dir/sub-<label>/ses-<label>/motion/*):
 
-* sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv
-* sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv
+* *sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv*
+* *sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv*
 
 and then resampled at 20 Hz. These files are required for the estimation of physical activity levels [(e) - (h)].
 
@@ -39,21 +39,51 @@ and (d) is based on the non-resampled data [no files]. Measures include:
 * average acceleration medians
 * peak acceleration medians
 * movement duration medians
-* entropy* values of the left and the right leg movement datasets
+* entropy values of the left and the right leg movement datasets
+
+.. image:: Kinematics_sample_output.png
 
 (e) lists the parameters provided to process data and generate \*\PA_RAW.json,
-\*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv ("*" denotes wildcard). In addition,
+\*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). In addition,
 the content of \*\PA_SUMMARY.json is available in this file.
 
 (f) lists bouts of activity as they occur over time. There are 4 columns of data:
-[start time of a bout, end time of a bout, duration of a bout, and classification
-of a bout]. The unit for time is seconds. The first line contains the headings,
-and the rest contain the data. Classification of bouts is [0: sedentary, 3: light activity,
-6: moderate-to-vigorous (MV) activity, 999: undefined (could not be computed)].
+
+.. list-table:: Table 1. Output format of \*\PA_BOUTS.tsv
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+    * - start time of a bout
+      - ...
+    * - end time of a bout
+      - ...
+    * - duration of a bout
+      - ...
+    * - classification of a bout
+      - ...
+
+The unit for time is seconds. The first line contains the headings,
+and the rest contain the data. Classification of bouts is:
+
+.. list-table:: Table 2. Classification of bouts
+   :widthds: 25 50
+   :header-rows: 1
+
+    * - Value
+      - 0
+      - 3
+      - 6
+      - 999
+    * - Classification
+      - sedentary
+      - light activity
+      - moderate-to-vigorous (MV) activity
+      - undefined (could not be computed)
 
 (g) lists instantaneous levels of avtivity as they occur over time.
 There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
 at each instance, and classification at each instance. Classification of instance is
+described in Table 2.
 [0: sedentary, 3: light activity, 6: moderate-to-vigorous (MV) activity, 999: undefined
 (could not be computed)].
 
@@ -63,10 +93,24 @@ actual time spent in minutes. For each measure, values will be listed for the to
 sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
 can be ignored.
 
-(i) lists the parameters provided when using the docker container. Items include
-[bids_dir, output_dir, analysis_level, participant_label, session_id, interval,
-pa_measure, pa_side, entropy_type, entropy_measure]. Please refer to :ref:`command-line-args`
-in the usage documentation for more details.
+(i) lists the parameters provided when using the docker container. Items include:
+
+* bids_dir
+* output_dir
+* analysis_level
+* participant_label
+* session_id
+* interval
+* pa_measure
+* pa_side
+* entropy_type
+* entropy_measure
+
+.. image:: Parameters_sample_output.png
+
+Please refer to :ref:`command-line-args` in the usage documentation for see possible
+choices for each item.
+
 
 .. toctree::
    :maxdepth: 2

@@ -8,7 +8,7 @@ The BIDS directory should have one folder for each subject
 whose session data will be processed.
 
 Each subject's folder should contain raw data files, along
-with metadata files. The expected names of the files (with \"\*\"
+with metadata files. The expected names of the files (with \*\
 denoting wildcard) are as follows: ::
 
     bids_dir/
@@ -26,8 +26,8 @@ denoting wildcard) are as follows: ::
     |   |   |   |-- sub-<label>_ses-<label>_task-<label>_tracksys-imu_acq-<label>_channels.tsv
     |   |   |   |-- sub-<label>_ses-<label>_task-<label>_tracksys-imu_acq-<label>_channels.json
 
-Possible labels for the 'task' are 'LeftLegMovement or 'RightLegMovement'.
-Possible labels for the 'acq' are 'calibration' or 'primary'.
+Possible labels for the `task` are **LeftLegMovement** or **RightLegMovement**.
+Possible labels for the `acq` are **calibration** or **primary**.
 Therefore, for each combination (ex. LeftLegMovement & calibration) there
 will be 4 associated files. In total, 16 files are expected.
 
@@ -38,7 +38,7 @@ This file will have seven columns, and the details about each column can be foun
 
 * sampling frequency
 * effective sampling frequency
-* task name ('primary' or 'calibration')
+* task name (primary or calibration)
 * task description
 * tracking system name
 * recording duration
@@ -52,7 +52,7 @@ This file will have seven columns, and the details about each column can be foun
 *\*\_channels.tsv* provides details about each column of *\*\_motion.tsv*. Items listed are:
 
 * Measurement axis (X, Y, or Z)
-* Sensor type ('accelerometer' or 'gyroscope')
+* Sensor type (accelerometer or gyroscope)
 * Sensor position (ankle)
 * Measurement unit (m/s^2, rad/s)
 * Latency (seconds)
