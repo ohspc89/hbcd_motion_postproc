@@ -49,39 +49,31 @@ the content of \*\PA_SUMMARY.json is available in this file.
 
 (f) lists bouts of activity as they occur over time. There are 4 columns of data:
 
-.. list-table:: Table 1. Output format of PA_BOUTS.tsv
-   :header-rows: 1
-
-    * - start time of a bout
-      - end time of a bout
-      - duration of a bout
-      - classification of a bout
-    * - ...
-      - ...
-      - ...
-      - ...
++----------------------+--------------------+--------------------+--------------------------+
+| start time of a bout | end time of a bout | duration of a bout | classification of a bout |
++======================+====================+====================+==========================+
+|           ...        |         ...        |         ...        |            ...           |
++----------------------+--------------------+--------------------+--------------------------+
 
 The unit for time is seconds. The first line contains the headings,
 and the rest contain the data. Classification of bouts is:
 
-.. list-table:: Table 2. Classification of bouts
-   :header-rows: 1
-
-    * - Value
-      - Classification
-    * - 0
-      - sedentary
-    * - 3
-      - light activity
-    * - 6
-      - moderate-to-vigorous (MV) activity
-    * - 999
-      - undefined (could not be computed)
++-------+--------------------------------------+
+| value |             classification           |
++=======+======================================+
+|   0   |               sedentary              |
++-------+--------------------------------------+
+|   3   |             light activity           |
++-------+--------------------------------------+
+|   6   |  moderate-to-vigorous (MV) activity  |
++-------+--------------------------------------+
+|  999  |   undefined (could not be computed)  |
++-------+--------------------------------------+
 
 (g) lists instantaneous levels of avtivity as they occur over time.
 There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
 at each instance, and classification at each instance. Classification of instance is
-described in Table 2.
+described in (f).
 [0: sedentary, 3: light activity, 6: moderate-to-vigorous (MV) activity, 999: undefined
 (could not be computed)].
 
