@@ -3,11 +3,11 @@
 Usage
 =====
 
-There are primary inputs to the hbcd_motion_postproc tool.
+There are three primary inputs to the hbcd_motion_postproc tool.
 In each case, the input is provided as a "study-wide" folder, such
 that the tool can be run on multiple subjects at once. These three
-directories include the BIDS directory, the relaxometry maps directory,
-and the segmentation directory.
+inputs include the BIDS directory, the output directory,
+and the analysis level (e.g., participant).
 
 At the time this application is run, there should be subject (and session,
 if sesired) specific folders for each subject you want to process. Processing
@@ -51,8 +51,6 @@ Command-Line Arguments
 .. argparse::
     :ref: hbcd_motion_postproc.my_parser.build_parser
     :prog: hbcd_motion_postproc
-    :nodefault:
-    :nodefaultconst:
 
 .. toctree::
    :maxdepth: 2

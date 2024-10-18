@@ -1,7 +1,7 @@
 Introduction
 ============
 
-In the HBCD study, Axivity Ax6 sensors were used to record
+In the HBCD study, Axivity Ax6 `<https://axivity.com/product/ax6>`_ sensors were used to record
 infant leg movements across 72 continuous hours. One sensor
 was placed on the distal right ankle and one sensor was
 placed on the distal left ankle, using legwarmers with a pocket

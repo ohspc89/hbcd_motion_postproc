@@ -27,12 +27,13 @@ the basic command to run the container is as follows ::
 
 where the following folder hierarchy is assumed in this case ::
 
-        Users
-        |-- joh
-            |-- Downloads
-                |-- hbcd
-                    |-- motion_data
-                        |-- sub-XXXXXX
-                        |-- sub-YYYYYY
-                        |-- sub-ZZZZZZ
-                        |-- ...
+        bids_dir/
+        |-- participants.tsv
+        |-- participants.json
+        |-- sub-<label>/
+        |   |-- sub-<label>_sessions.tsv
+        |   |-- sub-<label>_sessions.json
+        |   |-- ses-<label>/
+        |   |   |-- motion/
+        |   |   |-- sub-<label>_ses-<label>_scans.tsv
+        |   |   |-- sub-<label>_ses-<label>_scans.json
