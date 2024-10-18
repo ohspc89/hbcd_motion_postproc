@@ -21,9 +21,10 @@ Within this folder, the following can be found: ::
     (i) PARAMETERS.json
 
 (a), (b) are 72 hour left and right leg movement data. They are first calibrated using
+(found in */bids_dir/sub-<label>/ses-<label>/motion/*):
 
-* */bids_dir/sub-<label>/ses-<label>/motion/sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv*
-* */bids_dir/sub-<label>/ses-<label>/motion/sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv*
+* sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv
+* sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv
 
 and then resampled at 20 Hz. These files are required for the estimation of physical activity levels [(e) - (h)].
 

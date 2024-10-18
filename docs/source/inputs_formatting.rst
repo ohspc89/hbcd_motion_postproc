@@ -11,7 +11,7 @@ Each subject's folder should contain raw data files, along
 with metadata files. The expected names of the files (with \"\*\"
 denoting wildcard) are as follows: ::
 
-    bids/
+    bids_dir/
     |-- participants.tsv
     |-- participants.json
     |-- sub-<label>/
@@ -31,10 +31,10 @@ Possible labels for the 'acq' are 'calibration' or 'primary'.
 Therefore, for each combination (ex. LeftLegMovement & calibration) there
 will be 4 associated files. In total, 16 files are expected.
 
-'\*\_motion.tsv' is a recording of either calibration dataset or 72 hours of leg movement.
-This file will have seven columns, and the details about each column can be found in '\*\_channels.tsv'.
+*\*\_motion.tsv* is a recording of either calibration dataset or 72 hours of leg movement.
+This file will have seven columns, and the details about each column can be found in *\*\_channels.tsv*.
 
-'\*\_motion.json' is the metadata of a recording. Items listed are:
+*\*\_motion.json* is the metadata of a recording. Items listed are:
 
 * sampling frequency
 * effective sampling frequency
@@ -49,7 +49,7 @@ This file will have seven columns, and the details about each column can be foun
 * sensor name
 * sensor serial number
 
-'\*\_channels.tsv' provides details about each column of '\*\_motion.tsv'. Items listed are:
+*\*\_channels.tsv* provides details about each column of *\*\_motion.tsv*. Items listed are:
 
 * Measurement axis (X, Y, or Z)
 * Sensor type ('accelerometer' or 'gyroscope')
@@ -58,7 +58,7 @@ This file will have seven columns, and the details about each column can be foun
 * Latency (seconds)
 * Reference frame
 
-'\*\_channels.json' describes the reference frame in which the channels of the 
+*\*\_channels.json* describes the reference frame in which the channels of the 
 Inertial Measurement Unit (IMU) sensor used to prepare sensor movement dataset are represented
 
 .. toctree::

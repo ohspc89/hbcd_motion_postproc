@@ -14,14 +14,13 @@ After downloading the container, docker is the only other dependency needed
 for processing. The full usage details can be seen under the :ref:`usage` section, but
 the basic command to run the container is as follows ::
 
-        parent_dir=/parent/path/to/bids_dir (ex. /Users/joh/Downloads/hbcd)
-        bids_dir=bids_dir_folder_name       (ex. motion_data)
-        output_dir=output_dir_folder_name   (ex. motion_output)
+        bids_dir=/path/to/bids_dir
+        output_dir=/path/to/output_dir
         analysis_level=participant
 
-        docker run -v $parent_dir:/HBCD \
+        docker run -v $bids_dir:/HBCD \
             inclab/hbcd_motion_postproc \
-            /HBCD/$bids_dir \
+            /HBCD \
             /HBCD/$output_dir \
             $analysis_level
 
