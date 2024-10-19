@@ -30,24 +30,72 @@ and then resampled at 20 Hz. These files are required for the estimation of phys
 
 (c), (d) contain summary kinematic measures based on the 72 hour leg movement
 data. (c) is based on the resampled data [(a) & (b)],
-and (d) is based on the non-resampled data [no files]. Measures include:
+and (d) is based on the non-resampled data [no files]. Please refer to the table below
+to understand what each measure is about: 
 
-* threshold values
-* movement rates
-* total movement counts
-* sleep times
-* average acceleration medians
-* peak acceleration medians
-* movement duration medians
-* entropy values of the left and the right leg movement datasets
++--------------------------------+-----------------------------------------------------------------------------+
+| measure                        | description                                                                 |
++================================+=============================================================================+
+| Participant_id                 | <label> of sub-<label>                                                      |
++--------------------------------+-----------------------------------------------------------------------------+
+| Session_id                     | <label> of ses-<label>                                                      |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_positive_threshold        | a positive acceleration magnitude threshold to identify left leg movements  |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_positive_threshold       | a positive acceleration magnitude threshold to identify right leg movements |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_negative_threshold        | a negative acceleration magnitude threshold to identify left leg movements  |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_positive_threshold        | a negative cceleration magnitude threshold to identify right leg movements  |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_total_count               | the total left leg movement count                                           |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_total_count              | the total right leg movement count                                          |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_movement_rate             | left leg movement rate per hour awake                                       |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_movement_rate            | right leg movement rate per hour awake                                      |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_sleep_time                | time estimated to be asleep from the left leg movement data                 |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_sleep_time               | time estimated to be asleep from the right leg movement data                |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_average_acc_median        | median of the average accelerations of left leg movements                   |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left average_acc_iqr           | inter-quartile-range of the average accelerations of left leg movements     |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_peak_acc_median           | median of the peak accelerations of left leg movements                      |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_peak_acc_iqr              | inter-quartile-range of the peak accelerations of left leg movements        |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_movement_duration_median  | median of the durations of left leg movements                               |
++--------------------------------+-----------------------------------------------------------------------------+
+| Left_movement_duration_iqr     | inter-quartile-range of the durations of the left leg movements             |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_average_acc_median       | median of the average accelerations of left leg movements                   |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right average_acc_iqr          | inter-quartile-range of the average accelerations of left leg movements     |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_peak_acc_median          | median of the peak accelerations of left leg movements                      |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_peak_acc_iqr             | inter-quartile-range of the peak accelerations of left leg movements        |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_movement_duration_median | median of the durations of left leg movements                               |
++--------------------------------+-----------------------------------------------------------------------------+
+| Right_movement_duration_iqr    | inter-quartile-range of the durations of the left leg movements             |
++--------------------------------+-----------------------------------------------------------------------------+
+| entropies                      | sample entropy (SampEn) and/or fuzzy entropy (FuzzEn) of a time series      |
+|                                | (average_acc or peak_acc)                                                   |
++--------------------------------+-----------------------------------------------------------------------------+
 
-.. image:: Kinematics_sample_output.png
+
 
 (e) lists the parameters provided to process data and generate \*\PA_RAW.json,
 \*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). In addition,
 the content of \*\PA_SUMMARY.json is available in this file.
 
-(f) lists bouts of activity as they occur over time. There are 4 columns of data:
+(f) lists bouts of activity as they occur over time. There are 4 columns of data.
+
 
 +----------------------+--------------------+--------------------+--------------------------+
 | start time of a bout | end time of a bout | duration of a bout | classification of a bout |
@@ -83,23 +131,36 @@ actual time spent in minutes. For each measure, values will be listed for the to
 sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
 can be ignored.
 
-(i) lists the parameters provided when using the docker container. Items include:
+(i) lists the parameters provided when using the docker container. Please refer to the table below
+to check the parameters saved.
 
-* bids_dir
-* output_dir
-* analysis_level
-* participant_label
-* session_id
-* interval
-* pa_measure
-* pa_side
-* entropy_type
-* entropy_measure
++-------------------+
+| parameters        |
++===================+
+| bids_dir          |
++-------------------+
+| output_dir        |
++-------------------+
+| analysis_level    |
++-------------------+
+| participant_label |
++-------------------+
+| session_id        |
++-------------------+
+| interval          |
++-------------------+
+| pa_measure        |
++-------------------+
+| pa_side           |
++-------------------+
+| entropy_type      |
++-------------------+
+| entropy_measure   |
++-------------------+
 
-.. image:: Parameters_sample_output.png
 
 Please refer to :ref:`command-line-args` in the usage documentation for see possible
-choices for each item.
+choices for each parameter.
 
 
 .. toctree::

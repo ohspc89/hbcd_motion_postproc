@@ -26,6 +26,9 @@ denoting wildcard) are as follows: ::
     |   |   |   |-- sub-<label>_ses-<label>_task-<label>_tracksys-imu_acq-<label>_channels.tsv
     |   |   |   |-- sub-<label>_ses-<label>_task-<label>_tracksys-imu_acq-<label>_channels.json
 
+*sub-<label>_ses-<label>_scans.tsv* will have the age of the subject at the data collection.
+The age is in years (represented up to 3 decimal places).
+
 Possible labels for the `task` are **LeftLegMovement** or **RightLegMovement**.
 Possible labels for the `acq` are **calibration** or **primary**.
 Therefore, for each combination (ex. LeftLegMovement & calibration) there
