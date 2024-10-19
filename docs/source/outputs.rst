@@ -89,13 +89,11 @@ to understand what each measure is about:
 +--------------------------------+-----------------------------------------------------------------------------+
 
 
-
 (e) lists the parameters provided to process data and generate \*\PA_RAW.json,
 \*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). In addition,
 the content of \*\PA_SUMMARY.json is available in this file.
 
-(f) lists bouts of activity as they occur over time. There are 4 columns of data.
-
+(f) saves bouts of activity as they occur over time. There are 4 columns of data.
 
 +----------------------+--------------------+--------------------+--------------------------+
 | start time of a bout | end time of a bout | duration of a bout | classification of a bout |
@@ -122,8 +120,6 @@ and the rest contain the data. Classification of bouts is:
 There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
 at each instance, and classification at each instance. Classification of instance is
 described in (f).
-[0: sedentary, 3: light activity, 6: moderate-to-vigorous (MV) activity, 999: undefined
-(could not be computed)].
 
 (h) provides the overall summary of physical activity in terms of 3 different measures:
 counts (instances) recorded, in terms of percentage time spent, and in terms of
@@ -131,32 +127,18 @@ actual time spent in minutes. For each measure, values will be listed for the to
 sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
 can be ignored.
 
-(i) lists the parameters provided when using the docker container. Please refer to the table below
-to check the parameters saved.
+(i) lists the parameters provided when using the docker container. 
 
-+-------------------+
-| parameters        |
-+===================+
-| bids_dir          |
-+-------------------+
-| output_dir        |
-+-------------------+
-| analysis_level    |
-+-------------------+
-| participant_label |
-+-------------------+
-| session_id        |
-+-------------------+
-| interval          |
-+-------------------+
-| pa_measure        |
-+-------------------+
-| pa_side           |
-+-------------------+
-| entropy_type      |
-+-------------------+
-| entropy_measure   |
-+-------------------+
+* bids_dir
+* output_dir
+* analysis_level
+* participant_label
+* session_id
+* interval
+* pa_measure
+* pa_side
+* entropy_type
+* entropy_measure
 
 
 Please refer to :ref:`command-line-args` in the usage documentation for see possible
