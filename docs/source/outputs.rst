@@ -93,7 +93,7 @@ to understand what each measure is about:
 \*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). In addition,
 the content of \*\PA_SUMMARY.json is available in this file.
 
-(f) saves bouts of activity as they occur over time. There are 4 columns of data.
+\(\f\)\ saves bouts of activity as they occur over time. There are 4 columns of data.
 
 +----------------------+--------------------+--------------------+--------------------------+
 | start time of a bout | end time of a bout | duration of a bout | classification of a bout |
@@ -127,7 +127,7 @@ actual time spent in minutes. For each measure, values will be listed for the to
 sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
 can be ignored.
 
-(i) lists the parameters provided when using the docker container. 
+\(\i\)\ lists the parameters provided when using the docker container. 
 
 * bids_dir
 * output_dir
