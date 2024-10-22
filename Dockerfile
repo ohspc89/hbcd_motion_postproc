@@ -25,6 +25,7 @@ RUN pip install antropy==0.1.6
 RUN mkdir /code
 COPY ./hbcd_motion_postproc/run.py /code
 COPY ./hbcd_motion_postproc/base.py /code
+COPY ./hbcd_motion_postproc/utils.py /code
 COPY ./hbcd_motion_postproc/axivity.py /code
 COPY ./hbcd_motion_postproc/my_parser.py /code
 COPY ./hbcd_motion_postproc/cwa_metadata.py /code
