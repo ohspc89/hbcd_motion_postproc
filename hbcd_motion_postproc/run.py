@@ -50,12 +50,14 @@ Optional Arguments:
 """
 from pathlib import Path
 import json
-import argparse
+# import argparse
+import traceback
 import numpy as np
 import pyarrow.csv as pacsv
 import ax6_postproc
 import pa_calc_mighty_tot as pacalc
 from my_parser import build_parser
+from utils import get_age_from_tsv
 
 # These are the options related to reading tsv files
 readOptions = pacsv.ReadOptions(column_names=[],
@@ -215,18 +217,23 @@ def main():
             # default detrending method (median) and no in_en_dts specified
             print(f"Current working directory: {temp_session / 'motion'}")
             print('------------------------------')
-            # tsv files may be missing... then just plug in 999 for age
+            # tsv files may be missing... then just plug in 999 for age in months
             try:
                 tsvfile = temp_session / '_'.join((temp_participant.name,
                                                    temp_session.name,
-                                                   'scans.tsv'))
-                agetsv = pacsv.read_csv(tsvfile, parse_options=parseOptions)
-                # tsvfile is a long file... so look for the row whose 'filename'
-                # starts with 'motion'...
-                mm = [str(x).split('/')[0] == 'motion' for x in agetsv['filename']]
-                sub_age = np.ceil(agetsv['age'].filter(mm)[0].as_py()).astype('int')
-            except:
+                                                   'scans.tsv'
+                                                   ))
+                sub_age = get_age_from_tsv(tsvfile,
+                                           index_column='filename',
+                                           index_value=r'^motion.*',
+                                           )
+                print(f'age in month: {sub_age}')
+                print('------------------------------')
+            except Exception as e:
+                print(e)
                 sub_age = 999
+                print(f'age is missing; using 999')
+                print('------------------------------')
             # Make sub-directories: Kinematics and PA (Physical Activity)
             tempout_dir = output_dir / sub / ses / 'motion'
             path_kinematics = tempout_dir / 'Kinematics'
@@ -294,7 +301,7 @@ def main():
                 # If an end-user downloads data files and runs the analysis on a local machine,
                 # the following lines will be running
                 error_msg = f"""The movement sensor data of {sub}, {ses} \
-                    were not fully processed. Please check the error message: {str(e)}\n"""
+were not fully processed. Please check the error message: {traceback.format_exc()}\n"""
                 display_msg = f"""This message is also saved in the log:\n
                     {output_dir}/{sub}/{ses}/motion/LOG.txt\n"""
                 print(error_msg)
