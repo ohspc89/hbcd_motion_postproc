@@ -237,14 +237,12 @@ A new search begins with the reduced window length:
             # for the missed measurement.
             if new_winlen < 1:
                 if pwin is None:
-                    warnings.warn(f"winlen is shorter than 1s ({winlen}s). ",
-                                  f"Calibration output for {axis.lower()} axis: ",
-                                  "positive will be NaNs.")
+                    warnings.warn(f"""winlen is shorter than 1s ({winlen}s). \
+Calibration output for {axis.lower()} axis: positive will be NaNs.""")
                     pwin = np.empty(0, int)
                 if nwin is None:
-                    warnings.warn(f"winlen is shorter than 1s ({winlen}s). ",
-                                  f"Calibration output for {axis.lower()} axis: ",
-                                  "negative will be NaNs.")
+                    warnings.warn(f"""winlen is shorter than 1s ({winlen}s). \
+Calibration output for {axis.lower()} axis: negative will be NaNs.""")
                     nwin = np.empty(0, int)
                 return dict(zip(['p', 'n'], [pwin, nwin]))
 
