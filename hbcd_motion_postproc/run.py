@@ -184,7 +184,7 @@ def main():
         # Check that participant exists at the expected path
         # This should not be happening very often...
         if not temp_participant.exists():
-            raise FileNotFoundError()
+            raise FileNotFoundError(f"A folder does not exist: {temp_participant}")
 
         # Find session/sessions
         if session_label is None:
