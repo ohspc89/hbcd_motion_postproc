@@ -39,25 +39,25 @@ will be 4 associated files. In total, 16 files are expected.
 *\*\_motion.tsv* is a recording of either calibration dataset or 72 hours of leg movement.
 There should be following \*\_motion.tsv files:
 
-    (a) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv
-    (b) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv
-    (c) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_motion.tsv
-    (d) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_motion.tsv
+    a] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv
+    b] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv
+    c] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_motion.tsv
+    d] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_motion.tsv
 
 Each \*\_motion.tsv file will have seven columns:
 
-+-------+----------+----------+----------+----------+----------+----------+
-| t~0   | a~x(t~0) | a~y(t~0) | a~z(t~0) | ω~x(t~0) | ω~y(t~0) | ω~z(t~0) |
-+-------+----------+----------+----------+----------+----------+----------+
-| t~1   | a~x(t~0) | a~y(t~0) | a~z(t~0) | ω~x(t~0) | ω~y(t~0) | ω~z(t~0) |
-+-------+----------+----------+----------+----------+----------+----------+
-| ...   | ...      | ...      | ...      | ...      | ...      | ...      |
-+-------+----------+----------+----------+----------+----------+----------+
-| t~N   | a~x(t~N) | a~y(t~N) | a~z(t~N) | ω~x(t~N) | ω~y(t~N) | ω~z(t~N) |
-+-------+----------+----------+----------+----------+----------+----------+
++-------------+----------+----------+----------+----------+----------+----------+
+| t:sub:`0`   | a~x(t~0) | a~y(t~0) | a~z(t~0) | ω~x(t~0) | ω~y(t~0) | ω~z(t~0) |
++-------------+----------+----------+----------+----------+----------+----------+
+| t:sub:`1`   | a~x(t~0) | a~y(t~0) | a~z(t~0) | ω~x(t~0) | ω~y(t~0) | ω~z(t~0) |
++-------------+----------+----------+----------+----------+----------+----------+
+| ...         | ...      | ...      | ...      | ...      | ...      | ...      |
++-------------+----------+----------+----------+----------+----------+----------+
+| t:sub:`N`   | a~x(t~N) | a~y(t~N) | a~z(t~N) | ω~x(t~N) | ω~y(t~N) | ω~z(t~N) |
++-------------+----------+----------+----------+----------+----------+----------+
 
-t~i is the elapsed time from the start of a recording. i is the index of a data point.
-a~x(t), a~y(t), a~z(t) are the accelerometer readings at time t, along the three
+t:sub:`i` is the elapsed time from the start of a recording. i is the index of a data point.
+a\:sub:`x`\ (t), a~y(t), a~z(t) are the accelerometer readings at time t, along the three
 measurement axes. ω~x(t), ω~y(t), ω~z(t) are the gyroscope readings at time t, 
 along the three measurement axes. Further information about each column can be
 found in *\*\_channels.tsv*. (a) and (b) are ~1 minute long (calibration files) and
@@ -66,10 +66,10 @@ found in *\*\_channels.tsv*. (a) and (b) are ~1 minute long (calibration files) 
 *\*\_motion.json* is the metadata of a recording. There should be the following
 \*\_motion.json files:
 
-    (e) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.json
-    (f) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.json
-    (g) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_motion.json
-    (h) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_motion.json
+    e] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.json
+    f] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.json
+    g] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_motion.json
+    h] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_motion.json
 
 Items listed in each file are:
 
@@ -89,10 +89,10 @@ Items listed in each file are:
 *\*\_channels.tsv* provides details about each column of *\*\_motion.tsv*. 
 There should be the following \*\_channels.tsv files:
 
-    \(\i) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.tsv
-    (j) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibratioin_channels.tsv
-    (k) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_channels.tsv
-    (l) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_channels.tsv
+    i] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.tsv
+    j] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibratioin_channels.tsv
+    k] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_channels.tsv
+    l] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_channels.tsv
 
 Each \*\_channels.tsv file will have seven columns. For example, \(\i) for one subject is:
 
@@ -121,10 +121,10 @@ Inertial Measurement Unit (IMU) sensor used to prepare sensor movement dataset a
 Positive X, Y, and Z sensor axes correspond to anterior, right, superior, respectively.
 There should be the following \*\_channels.json files:
 
-    (m) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.json
-    (n) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibratioin_channels.json
-    (o) sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_channels.json
-    (p) sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_channels.json
+    m] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.json
+    n] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibratioin_channels.json
+    o] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_channels.json
+    p] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_channels.json
 
 
 .. toctree::
