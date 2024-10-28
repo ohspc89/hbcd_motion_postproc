@@ -25,7 +25,7 @@ Within this folder, the following can be found: ::
     j] LOG.txt
 
 Intermediate data files (a] ~ c])
------------------------
+---------------------------------
 
 a] lists the parameters provided when using the docker container. 
 
@@ -52,7 +52,7 @@ b] & c] are 72 hour left and right leg movement data. They are first calibrated 
 and then resampled at 20 Hz. These files are required for the estimation of physical activity levels (f] - i]).
 
 Processed data outputs (d] ~ i])
-----------------------
+--------------------------------
 
 d] & e] contain summary kinematic measures based on the 72 hour leg movement
 data. d] is based on the resampled data (a] & b]),
@@ -115,7 +115,7 @@ to understand what each measure is about:
 +--------------------------------+-----------------------------------------------------------------------------+
 
 
-e] lists the parameters provided to process data and generate \*\PA_RAW.json,
+f] lists the parameters provided to process data and generate \*\PA_RAW.json,
 \*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). In addition,
 the content of \*\PA_SUMMARY.json is available in this file.
 
