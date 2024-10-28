@@ -4,7 +4,6 @@
 Outputs
 =======
 
-
 The application outputs will generally mirror the structure
 of the inputs. The overall output folder structure can be seen
 below: ::
@@ -26,7 +25,6 @@ Within this folder, the following can be found: ::
 
 Intermediate data files (a] ~ c])
 ---------------------------------
-
 a] lists the parameters provided when using the docker container. 
 
 * bids_dir
@@ -53,7 +51,6 @@ and then resampled at 20 Hz. These files are required for the estimation of phys
 
 Processed data outputs (d] ~ i])
 --------------------------------
-
 d] & e] contain summary kinematic measures based on the 72 hour leg movement
 data. d] is based on the resampled data (a] & b]),
 and e] is based on the non-resampled data (no files). Please refer to the table below
@@ -156,7 +153,6 @@ can be ignored.
 
 Error log
 ---------
-
 j] will be created only if data are not processed by the pipeline.
 
 
