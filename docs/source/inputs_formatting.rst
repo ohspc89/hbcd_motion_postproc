@@ -56,7 +56,7 @@ Each \*\_motion.tsv file will have seven columns:
 | t\ :sub:`N`\ | a\ :sub:`x`\ (t\ :sub:`N`\ ) | a\ :sub:`y`\ (t\ :sub:`N`\ ) | a\ :sub:`z`\ (t\ :sub:`N`\ ) | ω\ :sub:`x`\ (t\ :sub:`N`\ ) | ω\ :sub:`y`\ (t\ :sub:`N`\ ) | ω\ :sub:`z`\ (t\ :sub:`N`\ ) |
 +--------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 
-t\ :sub:`i`\ is the elapsed time from the start of a recording. i is the index of a data point.
+t\ :sub:`i`\  is the elapsed time from the start of a recording. i is the index of a data point.
 a\ :sub:`x`\ (t), a\ :sub:`y`\ (t), a\ :sub:`z`\ (t) are the accelerometer readings 
 at time t, along the three measurement axes. ω\ :sub:`x`\ (t), ω\ :sub:`y`\ (t),
 ω\ :sub:`z`\ (t) are the gyroscope readings at time t, along the three measurement axes. 
@@ -107,6 +107,7 @@ Each \*\_channels.tsv file will have seven columns. For example, i] for one subj
 +-------------------+-----------+---------+---------------+---------+--------------------+-----------------+
 | LeftAnkle_GYRO_x  | z         | GYRO    | LeftAnkle     | rad/s   | 25.70383751213197  | local           |
 +-------------------+-----------+---------+---------------+---------+--------------------+-----------------+
+
 
 * name: the description of each column
 * component: the measurement axis (x, y, or z)
