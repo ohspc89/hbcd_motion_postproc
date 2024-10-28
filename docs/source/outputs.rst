@@ -1,3 +1,6 @@
+.. _outputs:
+
+
 Outputs
 =======
 
@@ -19,6 +22,10 @@ Within this folder, the following can be found: ::
     (g) PA/sub-<label>_ses-<label>_leg-<label>_desc-<label>PA_RAW.tsv
     (h) PA/sub-<label>_ses-<label>_leg-<label>_desc-<label>PA_SUMMARY.json
     (i) PARAMETERS.json
+    (j) LOG.txt
+
+Intermediate data files
+-----------------------
 
 (a), (b) are 72 hour left and right leg movement data. They are first calibrated using
 (found in */bids_dir/sub-<label>/ses-<label>/motion/*):
@@ -27,6 +34,9 @@ Within this folder, the following can be found: ::
 * *sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv*
 
 and then resampled at 20 Hz. These files are required for the estimation of physical activity levels [(e) - (h)].
+
+Processed data outputs
+----------------------
 
 (c), (d) contain summary kinematic measures based on the 72 hour leg movement
 data. (c) is based on the resampled data [(a) & (b)],
@@ -143,6 +153,11 @@ can be ignored.
 
 Please refer to :ref:`command-line-args` in the usage documentation for see possible
 choices for each parameter.
+
+Error log
+---------
+
+(j) will be created only if data are not processed by the pipeline.
 
 
 .. toctree::

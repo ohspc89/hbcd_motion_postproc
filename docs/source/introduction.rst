@@ -2,15 +2,18 @@ Introduction
 ============
 
 In the HBCD study, `Axivity Ax6 <https://axivity.com/product/ax6>`_ sensors were used to record
-infant leg movements across 72 continuous hours. One sensor
-was placed on the distal right ankle and one sensor was
-placed on the distal left ankle, using legwarmers with a pocket
-to hold the sensor.
+infant leg movements across 72 continuous hours. Research
+assistants of the study placed one sensor on the distal 
+right ankle and another on the distal left ankle, using 
+legwarmers with a pocket to hold the sensor.
 Sensors were set to start recording at 10 a.m. eastern / 9 a.m.
 central / 8 a.m. mountain / 7 a.m. pacific. Caregivers were
-instructred to go about their typical activities but to remove
-the sensors if the baby went into water (e.g., bathtub or pool)
-and replace them afterward.
+instructred to go about their typical activities in the natural
+environment but to remove the sensors if the baby went into water 
+(e.g., bathtub or pool) and replace them afterward.
+
+Legmovement data recording occurred at **V02 (0-1 months of age)** and
+at **V03 (3-8 months of age)**.
 
 The sensors were set to record accelerometer (acceleration,
 range of +/- 16g) and gyroscope (angular velocity, rate of rotation,
@@ -30,6 +33,10 @@ on its next flat surface. Wait 10 seconds. You should put the sensor in 6
 different positions and collect 10 seconds of data in each position,
 so just over a minute of data in total (including the time to rotate it).
 It does not matter what order you do this in.
+
+Data files included in the data release are raw sensor data in `BIDS <https://bids.neuroimaging.io>`_
+format for the calibration and 72-hour files for the right and the left leg
+(:ref:`inputs`), as well as files containing processed data :ref:`outputs`. 
 
 Key references
 --------------
@@ -81,3 +88,40 @@ Thresholds for Estimating Physical Activity Intensity Levels in Infants: A
 Preliminary Study. *Sensors (Basel, Switzerland), 24* (14), 4436.
 https://doi.org/10.3390/s24144436
 
+
+Quality Control (QC) Processes
+------------------------------
+
+* **QC Procedures**: Raw data files were spot-checked during the data collection
+  time frame. Only a small percentage of data files were randomly checked each
+  week as the process was manual and visual. When checked, calibration files were
+  checked for presence of adequate data for each of 6 axes and 72-hour files were
+  checked for the presence of data, labeling of right and left leg, and sampling
+  rate used.
+
+* **Common Issues Identified**: Common issues identified during the QC proceeses
+  included inadequate data for each of the six axes in calibration files (human error),
+  missing data for calibration files (due to human error or technical difficulties),
+  missing data for 72 hours (due to human error, technical difficulties, or parent/
+  legal guardian declining to participate in this aspect of the study), sensors
+  being removed from prolonged periods during the 72 hours, or the use of incorrect 
+  sampling rate during the 72 hour collection. If possible, errors were corrected (but
+  this was not often possible). All issues occurred rarely overall and the majority
+  of the data were judged to be present and correctly collected. If data from a 
+  particular visit fell under any of the aforementioned scenarios, the preprocessing 
+  pipeline would fail to process the data and generate an error log (LOG.txt).
+
+
+Potential Issues Flagged by Subject Matter Experts
+--------------------------------------------------
+
+No issues were found. Users are reminded that accelerometer sensor timestamps drift
+over time, so even though the right and the left leg sensors started recording at the
+same time and recorded for the same duration of the time at the same sampling rate,
+one cannot assume that the time specified matches exactly between the two sensors.
+By our estimates, Axivity Ax6 sensors recording at 25 samples/sec diverge from one
+another by a couple of seconds by the end of 72 hours, and the magnitude of this
+error increases over time. Further, offsets were diffrent between different sensors,
+so a calibration procedure was used to adjust for this (See Oh, J., Loeb, G. E., & 
+Smith, B. A. (2024). The Utility of Calibrating Wearable Sensors before Quantifying 
+Infant Leg Movements. *Sensors (Basel, Switzerland), 24* (17), 5736.)
