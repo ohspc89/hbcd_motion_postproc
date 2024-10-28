@@ -10,7 +10,7 @@ inputs include the BIDS directory, the output directory,
 and the analysis level (e.g., participant).
 
 At the time this application is run, there should be subject (and session,
-if sesired) specific folders for each subject you want to process. Processing
+if desired) specific folders for each subject you want to process. Processing
 will iterate through each subject in the BIDS directory, find associated
 sessions with the relevant data, and create the necessary folders and files
 in the output directory. Processing is totally independent across subjects

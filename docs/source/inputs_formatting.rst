@@ -94,7 +94,7 @@ There should be four \*\_channels.tsv files::
     k] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_channels.tsv
     l] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_channels.tsv
 
-Each \*\_channels.tsv file will have seven columns. For example, \(\i) for one subject is:
+Each \*\_channels.tsv file will have seven columns. For example, i] for one subject is:
 
 +-------------------+-----------+---------+---------------+---------+--------------------+-----------------+
 | name              | component | type    | tracked_point | units   | sampling_frequency | reference_frame |
