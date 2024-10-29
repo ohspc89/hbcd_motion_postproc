@@ -21,7 +21,7 @@ the basic command to run the container is as follows ::
 
         singularity run -B $bids_dir:/HBCD \
         -B $output_dir:/out \
-        $container /bids/out $analysis_level
+        $container /bids /out $analysis_level
 
 where the following folder hierarchy is assumed in this case ::
 

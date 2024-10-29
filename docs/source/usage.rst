@@ -35,7 +35,7 @@ docker image: ::
 
         singularity run -B $bids_dir:/HBCD \
         -B $output_dir:/out \
-        $container /bids/out $analysis_level
+        $container /bids /out $analysis_level
 
 
 To see more specific information about how this tool expects
