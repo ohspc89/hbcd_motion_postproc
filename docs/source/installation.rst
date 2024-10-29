@@ -16,13 +16,12 @@ the basic command to run the container is as follows ::
 
         bids_dir=/path/to/bids_dir
         output_dir=/path/to/output_dir
+        container=/path/to/container
         analysis_level=participant
 
-        docker run -v $bids_dir:/HBCD \
-            inclab/hbcd_motion_postproc \
-            /HBCD \
-            /HBCD/$output_dir \
-            $analysis_level
+        singularity run -B $bids_dir:/HBCD \
+        -B $output_dir:/out \
+        $container /bids/out $analysis_level
 
 where the following folder hierarchy is assumed in this case ::
 
