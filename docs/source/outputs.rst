@@ -51,10 +51,10 @@ and then resampled at 20 Hz. These files are required for the estimation of phys
 
 Processed data outputs: d] ~ i]
 -------------------------------
-d] and e] contain summary kinematic measures based on the 72 hour leg movement
-data. d] is based on the resampled data, a] and b],
-and e] is based on the non-resampled data (No intermediate data files exist). 
-Please refer to the table below to understand what each measure is about: 
+| d] and e] contain summary kinematic measures based on the 72 hour leg movement data. 
+| d] is based on the resampled data, a] and b], and e] is based on the non-resampled data
+  (No intermediate data files exist). 
+| Please refer to the table below to understand what each measure is about: 
 
 +--------------------------------+-----------------------------------------------------------------------------+
 | measure                        | description                                                                 |
@@ -112,9 +112,9 @@ Please refer to the table below to understand what each measure is about:
 +--------------------------------+-----------------------------------------------------------------------------+
 
 
-f] lists the parameters provided to process data and generate \*\PA_RAW.json,
-\*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). In addition,
-the content of \*\PA_SUMMARY.json is available in this file.
+| f] lists the parameters provided to process data and generate \*\PA_RAW.json,
+  \*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). 
+| In addition, the content of \*\PA_SUMMARY.json is available in this file.
 
 g] saves bouts of activity as they occur over time. There are 4 columns of data.
 
@@ -124,8 +124,9 @@ g] saves bouts of activity as they occur over time. There are 4 columns of data.
 |           ...        |         ...        |         ...        |            ...           |
 +----------------------+--------------------+--------------------+--------------------------+
 
-The unit for time is seconds. The first line contains the headings,
-and the rest contain the data. Classification of bouts is:
+| The unit for time is seconds. The first line contains the headings,
+  and the rest contain the data. 
+| Classification of bouts is:
 
 +-------+--------------------------------------+
 | value |             classification           |
@@ -139,16 +140,18 @@ and the rest contain the data. Classification of bouts is:
 |  999  |   undefined (could not be computed)  |
 +-------+--------------------------------------+
 
-h] lists instantaneous levels of avtivity as they occur over time.
-There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
-at each instance, and classification at each instance. Classification of instance is
-described in g].
+| h] lists instantaneous levels of avtivity as they occur over time.
+| There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
+  at each instance, and classification at each instance. 
+| Classification of instance is described in g].
 
-i] provides the overall summary of physical activity in terms of 3 different measures:
-counts (instances) recorded, in terms of percentage time spent, and in terms of
-actual time spent in minutes. For each measure, values will be listed for the total,
-sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
-can be ignored.
+| i] provides the overall summary of physical activity in terms of 3 different measures:
+|    counts (instances) recorded
+|    percentage time spent
+|    actual time spent in minutes. 
+| For each measure, values will be listed for the total, sedentary, light, 
+  and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
+  can be ignored.
 
 
 Error log: j]

@@ -13,9 +13,8 @@ BIDS directory
 The BIDS directory should have one folder for each subject
 whose session data will be processed.
 
-Each subject's folder should contain raw data files, along
-with metadata files. The expected names of the files (with \*\
-denoting wildcard) are as follows: ::
+| Each subject's folder should contain raw data files, along with metadata files. 
+| The expected names of the files (with \*\ denoting wildcard) are as follows: ::
 
     bids_dir/
     |-- participants.tsv
@@ -32,25 +31,17 @@ denoting wildcard) are as follows: ::
     |   |   |   |-- sub-<label>_ses-<label>_task-<label>_tracksys-imu_acq-<label>_channels.tsv
     |   |   |   |-- sub-<label>_ses-<label>_task-<label>_tracksys-imu_acq-<label>_channels.json
 
-*sub-<label>_ses-<label>_scans.tsv* will have the age of the subject at the data collection.
-The age is in years (represented up to 3 decimal places).
+| *sub-<label>_ses-<label>_scans.tsv* will have the age of the subject at the data collection.
+| The age is in years (represented up to 3 decimal places).
 
-*task* and *acq* have predetermined label choices.
+| Calibration files will have the *acq* label of **calibration**.
+| 72-hour files will have the *acq* label of **primary**.
 
-+-------------------------------------------------------------------------------------------+
-|                             | acq label                                                   |
-+-----------------------------+------------------------------+------------------------------+
-|                             | Calibration file             | 72-hour file                 |
-+------------+----------------+------------------------------+------------------------------+
-| task label | Left leg data  | task- **LeftLegMovement** &  | task- **LeftLegMovement** &  |
-|            |                | acq- *Calibration*           | acq- *primary*               |
-|            +----------------+------------------------------+------------------------------+
-|            | Right leg data | task- **RightLegMovement** & | task- **RightLegMovement** & |
-|            |                | acq- *Calibration*           | acq- *primary*               |
-+------------+----------------+------------------------------+------------------------------+
+| Files that contain left leg movement will have the *task* label: **LeftLegMovement**.
+| Files that contain right leg movement have the *task* label: **RightLegMovement**.
 
-For each combination (ex. task-LeftLegMovement & acq-Calibration) there will be 4 associated files. 
-In total, **16 files** (4 combinations * 4 files) are expected.
+| For each combination (ex. task-LeftLegMovement & acq-Calibration) there will be 4 associated files. 
+| In total, **16 files** (4 combinations * 4 files) are expected.
 
 Files: raw time-series data (\*\_motion.tsv)
 --------------------------------------------
@@ -173,10 +164,10 @@ Rows
 Files: complementing \*\_channels.tsv
 -------------------------------------
 
-A *\*\_channels.json* describes the spatial properties of the reference frame used to
-prepare sensor movement dataset are represented.
-Positive X, Y, and Z sensor axes correspond to anterior, right, superior, respectively.
-There should be four \*\_channels.json files::
+| A *\*\_channels.json* describes the spatial properties of the reference frame used to
+  prepare sensor movement dataset are represented.
+| Positive X, Y, and Z sensor axes correspond to anterior, right, superior, respectively.
+| There should be four \*\_channels.json files::
 
     # Calibration files
     m] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.json
