@@ -23,8 +23,8 @@ Within this folder, the following can be found: ::
     i] PA/sub-<label>_ses-<label>_leg-<label>_desc-<label>PA_SUMMARY.json
     j] LOG.txt
 
-Intermediate data files (a] ~ c])
----------------------------------
+Intermediate data files: a] ~ c]
+--------------------------------
 a] lists the parameters provided when using the docker container. 
 
 * bids_dir
@@ -41,7 +41,7 @@ a] lists the parameters provided when using the docker container.
 Please refer to :ref:`command-line-args` in the usage documentation for see possible
 choices for each parameter.
 
-b] & c] are 72 hour left and right leg movement data. They are first calibrated using
+b] and c] are 72 hour left and right leg movement data. They are first calibrated using
 (found in */bids_dir/sub-<label>/ses-<label>/motion/*):
 
 * *sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv*
@@ -49,12 +49,12 @@ b] & c] are 72 hour left and right leg movement data. They are first calibrated 
 
 and then resampled at 20 Hz. These files are required for the estimation of physical activity levels (f] - i]).
 
-Processed data outputs (d] ~ i])
---------------------------------
-d] & e] contain summary kinematic measures based on the 72 hour leg movement
-data. d] is based on the resampled data (a] & b]),
-and e] is based on the non-resampled data (no files). Please refer to the table below
-to understand what each measure is about: 
+Processed data outputs: d] ~ i]
+-------------------------------
+d] and e] contain summary kinematic measures based on the 72 hour leg movement
+data. d] is based on the resampled data, a] and b],
+and e] is based on the non-resampled data (No intermediate data files exist). 
+Please refer to the table below to understand what each measure is about: 
 
 +--------------------------------+-----------------------------------------------------------------------------+
 | measure                        | description                                                                 |
@@ -151,8 +151,8 @@ sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "unde
 can be ignored.
 
 
-Error log (j])
---------------
+Error log: j]
+-------------
 j] will be created only if data are not processed by the pipeline.
 
 
