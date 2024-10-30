@@ -13,8 +13,8 @@ BIDS directory
 The BIDS directory should have one folder for each subject
 whose session data will be processed.
 
-| Each subject's folder should contain raw data files, along with metadata files. 
-| The expected names of the files (with \*\ denoting wildcard) are as follows: ::
+Each subject's folder should contain raw data files, along with metadata files. 
+The expected names of the files (with \*\ denoting wildcard) are as follows::
 
     bids_dir/
     |-- participants.tsv
