@@ -1,4 +1,4 @@
-Survey Data
+Survey data
 ===========
 
 In addition to the wearable sensor data, daily survey about infant heart rate
