@@ -34,17 +34,17 @@ The expected names of the files (with \*\ denoting wildcard) are as follows::
 | *sub-<label>_ses-<label>_scans.tsv* will have the age of the subject at the data collection.
 | The age is in years (represented up to 3 decimal places).
 
-| Calibration files will have the *acq* label of **calibration**.
-| 72-hour files will have the *acq* label of **primary**.
+| Calibration files will have the *acq* label: **calibration**.
+| 72-hour files will have the *acq* label: **primary**.
 
-| Files that contain left leg movement will have the *task* label: **LeftLegMovement**.
-| Files that contain right leg movement have the *task* label: **RightLegMovement**.
+| Files that contain left leg movements will have the *task* label: **LeftLegMovement**.
+| Files that contain right leg movements have the *task* label: **RightLegMovement**.
 
-| For each combination (ex. task-LeftLegMovement & acq-Calibration) there will be 4 associated files. 
+| For each combination (ex. task-LeftLegMovement & acq-calibration) there will be 4 associated files. 
 | In total, **16 files** (4 combinations * 4 files) are expected.
 
-Files: raw time-series data (\*\_motion.tsv)
---------------------------------------------
+Raw time-series data (\*\_motion.tsv)
+-------------------------------------
 
 A *\*\_motion.tsv* is a recording of either calibration dataset or 72 hours of leg movement.
 There should be four \*\_motion.tsv files::
@@ -69,13 +69,13 @@ Each \*\_motion.tsv file will have seven columns:
 | t\ :sub:`N`\ | a\ :sub:`x`\ (t\ :sub:`N`\ ) | a\ :sub:`y`\ (t\ :sub:`N`\ ) | a\ :sub:`z`\ (t\ :sub:`N`\ ) | ω\ :sub:`x`\ (t\ :sub:`N`\ ) | ω\ :sub:`y`\ (t\ :sub:`N`\ ) | ω\ :sub:`z`\ (t\ :sub:`N`\ ) |
 +--------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 
-t\ :sub:`i`\  is the elapsed time from the start of a recording, where i is the index of a data point.
-a\ :sub:`x`\ (t\ :sub:`i`\ ), a\ :sub:`y`\ (t\ :sub:`i`\ ),
-a\ :sub:`z`\ (t\ :sub:`i`\ ) are the accelerometer readings at time t\ :sub:`i`\ , 
-along the three measurement axes, while ω\ :sub:`x`\ (t\ :sub:`i`\ ), ω\ :sub:`y`\ (t\ :sub:`i`\ ),
-ω\ :sub:`z`\ (t\ :sub:`i`\ ) are the gyroscope readings at time t\ :sub:`i`\  
-along its three measurement axes. 
-Further information about each column can be found in *\*\_channels.tsv*. 
+| t\ :sub:`i`\  is the elapsed time from the start of a recording, where i is the index of a data point.
+| a\ :sub:`x`\ (t\ :sub:`i`\ ), a\ :sub:`y`\ (t\ :sub:`i`\ ),
+  a\ :sub:`z`\ (t\ :sub:`i`\ ) are the accelerometer readings at time t\ :sub:`i`\ ,
+  along the three measurement axes.
+| ω\ :sub:`x`\ (t\ :sub:`i`\ ), ω\ :sub:`y`\ (t\ :sub:`i`\ ), ω\ :sub:`z`\ (t\ :sub:`i`\ )
+  are the gyroscope readings at time t\ :sub:`i`\  along its three measurement axes. 
+| Further information about each column can be found in *\*\_channels.tsv*. 
 
 .. note::
 
@@ -83,8 +83,8 @@ Further information about each column can be found in *\*\_channels.tsv*.
    first need to calibrate c] and d] using a] and b], respectively. They can then use
    *calibrated* c] and d] to proceed with their custom analyses.
 
-Files: metadata to a specific tracking system (\*\_motion.json)
----------------------------------------------------------------
+Metadata to a specific tracking system (\*\_motion.json)
+--------------------------------------------------------
 
 A *\*\_motion.json* contains metadata to the sensor used for preparing either a calibration file
 or a 72-hour file. There should be four \*\_motion.json files::
@@ -112,8 +112,8 @@ Items listed in each file are:
 * sensor name
 * sensor serial number
 
-Files: metadata to the recorded channels (\*\_channels.tsv)
------------------------------------------------------------
+Metadata to the recorded channels (\*\_channels.tsv)
+----------------------------------------------------
 
 A *\*\_channels.tsv* provides details about each column of *\*\_motion.tsv*. 
 There should be four \*\_channels.tsv files::
@@ -161,13 +161,13 @@ Rows
 * LeftAnkle (or RightAnkle) GYRO_y: gyroscope's y-axis
 * LeftAnkle (or RightAnkle) GYRO_z: gyroscope's z-axis
 
-Files: complementing \*\_channels.tsv
--------------------------------------
+Metadata complementing \*\_channels.tsv (\*\_channels.json)
+-----------------------------------------------------------
 
-| A *\*\_channels.json* describes the spatial properties of the reference frame used to
-  prepare sensor movement dataset are represented.
-| Positive X, Y, and Z sensor axes correspond to anterior, right, superior, respectively.
-| There should be four \*\_channels.json files::
+A *\*\_channels.json* describes the spatial properties of the reference frame used to
+prepare sensor movement dataset are represented.
+Positive X, Y, and Z sensor axes correspond to anterior, right, superior, respectively.
+There should be four \*\_channels.json files::
 
     # Calibration files
     m] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.json

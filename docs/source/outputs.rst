@@ -143,15 +143,17 @@ g] saves bouts of activity as they occur over time. There are 4 columns of data.
 | h] lists instantaneous levels of avtivity as they occur over time.
 | There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
   at each instance, and classification at each instance. 
-| Classification of instance is described in g].
+  Classification of instance is described in g].
 
-| i] provides the overall summary of physical activity in terms of 3 different measures:
-|    counts (instances) recorded
-|    percentage time spent
-|    actual time spent in minutes. 
-| For each measure, values will be listed for the total, sedentary, light, 
-  and moderate-to-vigorous (MV) activity. The fifth label, "undefined",
-  can be ignored.
+i] provides the overall summary of physical activity in terms of 3 different measures:
+
+* counts (instances) recorded
+* percentage time spent
+* actual time spent in minutes. 
+
+For each measure, values will be listed for the total, sedentary, light, 
+and moderate-to-vigorous (MV) activity. The fifth label, "undefined", 
+can be ignored.
 
 
 Error log: j]

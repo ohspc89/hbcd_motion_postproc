@@ -1,16 +1,17 @@
 Introduction
 ============
 
-| In the HBCD study, `Axivity Ax6 <https://axivity.com/product/ax6>`_ sensors were used to record
-  infant leg movements across 72 continuous hours. Research
-  assistants of the study placed one sensor on the distal 
-  right ankle and another on the distal left ankle, using 
-  legwarmers with a pocket to hold the sensor.
-| Sensors were set to start recording at 10 a.m. eastern / 9 a.m.
-  central / 8 a.m. mountain / 7 a.m. pacific. Caregivers were
-  instructred to go about their typical activities in the natural
-  environment but to remove the sensors if the baby went into water 
-  (e.g., bathtub or pool) and replace them afterward.
+In the HBCD study, `Axivity Ax6 <https://axivity.com/product/ax6>`_ sensors were used to record
+infant leg movements across 72 continuous hours. Research
+assistants of the study placed one sensor on the distal 
+right ankle and another on the distal left ankle, using 
+legwarmers with a pocket to hold the sensor.
+
+Sensors were set to start recording at 10 a.m. eastern / 9 a.m.
+central / 8 a.m. mountain / 7 a.m. pacific. Caregivers were
+instructred to go about their typical activities in the natural
+environment but to remove the sensors if the baby went into water 
+(e.g., bathtub or pool) and replace them afterward.
 
 Legmovement data recording occurred at **V02 (0-1 months of age)** and
 at **V03 (3-8 months of age)**.
@@ -23,16 +24,17 @@ at **V03 (3-8 months of age)**.
   activity, light physical activity, moderate-to-vigorous activity,
   or asleep.
 
-| Before the 72 hours of data were collected, a calibration file was
-  collected for each sensor. Instructions for collection of the calibration
-  data were: "There are 6 flat surfaces of the sensor and we want to record
-  data with the sensor sitting still on each of its flat surfaces.
-| To do this: place the sensor on a level, flat surface (e.g., the surface
-  of a desk or table). Wait 10 seconds. Rotate it so that it is resting
-  on its next flat surface. Wait 10 seconds. You should put the sensor in 6
-  different positions and collect 10 seconds of data in each position,
-  so just over a minute of data in total (including the time to rotate it).
-| It does not matter what order you do this in.
+Before the 72 hours of data were collected, a calibration file was
+collected for each sensor. Instructions for collection of the calibration
+data were: "There are 6 flat surfaces of the sensor and we want to record
+data with the sensor sitting still on each of its flat surfaces.
+
+To do this: place the sensor on a level, flat surface (e.g., the surface
+of a desk or table). Wait 10 seconds. Rotate it so that it is resting
+on its next flat surface. Wait 10 seconds. You should put the sensor in 6
+different positions and collect 10 seconds of data in each position,
+so just over a minute of data in total (including the time to rotate it).
+It does not matter what order you do this in.
 
 Data files included in the data release are raw sensor data in `BIDS <https://bids.neuroimaging.io>`_
 format for the calibration and 72-hour files for the right and the left leg
@@ -115,7 +117,8 @@ Quality Control (QC) Processes
 Potential Issues Flagged by Subject Matter Experts
 --------------------------------------------------
 
-| No issues were found.
+No issues were found.
+
 | Users are reminded that accelerometer sensor timestamps drift over time, so even 
   though the right and the left leg sensors started recording at the same time and
   recorded for the same duration of the time at the same sampling rate,
@@ -123,6 +126,6 @@ Potential Issues Flagged by Subject Matter Experts
 | By our estimates, Axivity Ax6 sensors recording at 25 samples/sec diverge from one
   another by a couple of seconds by the end of 72 hours, and the magnitude of this
   error increases over time. Further, offsets were diffrent between different sensors,
-  so a calibration procedure was used to adjust for this 
-| (See Oh, J., Loeb, G. E., & Smith, B. A. (2024). The Utility of Calibrating Wearable
-  Sensors before Quantifying Infant Leg Movements. *Sensors (Basel, Switzerland), 24* (17), 5736.)
+  so a calibration procedure was used to adjust for this (See Oh, J., Loeb, G. E., & Smith, B. A.
+  (2024). The Utility of Calibrating Wearable Sensors before Quantifying Infant Leg Movements.
+  *Sensors (Basel, Switzerland), 24* (17), 5736.).

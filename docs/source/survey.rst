@@ -15,7 +15,7 @@ Survey data
   swing or other restraining device, how much they were in a moving car or stroller
   or being carried, and whether or not their legs are swaddled during naps and
   sleep).
-| This survey was created by the workgroup.
+  This survey was created by the workgroup.
 
 A research assistant (RA) marked preferred contact and preferred method of contact
 (email or text message) at visit, then surveys were sent automatically. Spanish
