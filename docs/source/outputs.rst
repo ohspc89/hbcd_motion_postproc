@@ -152,7 +152,7 @@ can be ignored.
 
 
 Error log (j])
----------
+--------------
 j] will be created only if data are not processed by the pipeline.
 
 

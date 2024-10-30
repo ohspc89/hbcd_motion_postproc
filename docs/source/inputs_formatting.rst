@@ -71,6 +71,7 @@ a] and b] are ~1 minute long (calibration files) and
 c] and d] are 72 hours long (raw movement recording files)
 
 .. note::
+
 Users interested in conducting their own analyses and not using the processing container
 first need to calibrate c] and d] using a] and b], respectively. They can then use *calibrated*
 c] and d] to proceed with their custom analyses.
