@@ -1,8 +1,8 @@
 .. _outputs:
 
 
-Outputs
-=======
+Processed data outputs
+======================
 
 The application outputs will generally mirror the structure
 of the inputs. The overall output folder structure can be seen
@@ -151,7 +151,7 @@ sedentary, light, and moderate-to-vigorous (MV) activity. The fifth label, "unde
 can be ignored.
 
 
-Error log
+Error log (j])
 ---------
 j] will be created only if data are not processed by the pipeline.
 

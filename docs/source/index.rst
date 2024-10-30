@@ -3,7 +3,7 @@ Welcome to hbcd_motion_postproc's documentation!
 
 This tool is used in the Healthy Brain and Child Development (HBCD) study
 to run minimal post-processing on the leg movement data collected using
-inertial measurement units.
+inertial measurement units (IMUs).
 
 .. note::
 
@@ -19,3 +19,4 @@ inertial measurement units.
    usage
    inputs_formatting
    outputs
+   survey

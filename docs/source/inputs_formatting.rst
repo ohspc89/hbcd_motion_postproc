@@ -1,7 +1,11 @@
 .. _inputs:
 
-Expected Formatting of Inputs
-=============================
+Data inputs to the container: raw BIDS files
+============================================
+
+This page provides details on the raw sensor data in BIDS format
+for the calibration and 72-hour files for the right leg and the left leg,
+which are provided as data inputs to the processing container.
 
 BIDS directory
 --------------
@@ -34,7 +38,7 @@ The age is in years (represented up to 3 decimal places).
 Possible labels for the `task` are **LeftLegMovement** or **RightLegMovement**.
 Possible labels for the `acq` are **calibration** or **primary**.
 Therefore, for each combination (ex. LeftLegMovement & calibration) there
-will be 4 associated files. In total, 16 files are expected.
+will be 4 associated files. In total, **16 files** are expected.
 
 *\*\_motion.tsv* is a recording of either calibration dataset or 72 hours of leg movement.
 There should be four \*\_motion.tsv files::
@@ -57,12 +61,19 @@ Each \*\_motion.tsv file will have seven columns:
 +--------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 
 t\ :sub:`i`\  is the elapsed time from the start of a recording. i is the index of a data point.
-a\ :sub:`x`\ (t), a\ :sub:`y`\ (t), a\ :sub:`z`\ (t) are the accelerometer readings 
-at time t, along the three measurement axes. ω\ :sub:`x`\ (t), ω\ :sub:`y`\ (t),
-ω\ :sub:`z`\ (t) are the gyroscope readings at time t, along the three measurement axes. 
+a\ :sub:`x`\ (t\ :sub:`i`\ ), a\ :sub:`y`\ (t\ :sub:`i`\ ),
+a\ :sub:`z`\ (t\ :sub:`i`\ ) are the accelerometer readings at time t\ :sub:`i`\ , 
+along the three measurement axes. ω\ :sub:`x`\ (t\ :sub:`i`\ ), ω\ :sub:`y`\ (t\ :sub:`i`\ ),
+ω\ :sub:`z`\ (t\ :sub:`i`\ ) are the gyroscope readings at time t\ :sub:`i`\ , 
+along the three measurement axes. 
 Further information about each column can be found in *\*\_channels.tsv*. 
 a] and b] are ~1 minute long (calibration files) and 
-c] and d] are 72 hours long (actual recording files)
+c] and d] are 72 hours long (raw movement recording files)
+
+.. note::
+Users interested in conducting their own analyses and not using the processing container
+first need to calibrate c] and d] using a] and b], respectively. They can then use *calibrated*
+c] and d] to proceed with their custom analyses.
 
 *\*\_motion.json* is the metadata of a recording. There should be four \*\_motion.json files::
 
