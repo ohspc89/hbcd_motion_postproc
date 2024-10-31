@@ -12,14 +12,14 @@ versions of the container can be found `here <https://hub.docker.com/r/inclab/hb
 
 After downloading the container, docker is the only other dependency needed
 for processing. The full usage details can be seen under the :ref:`usage` section, but
-the basic command to run the container is as follows ::
+the basic command to run the container using ``singularity`` is as follows ::
 
         bids_dir=/path/to/bids_dir
         output_dir=/path/to/output_dir
         container=/path/to/container
         analysis_level=participant
 
-        singularity run -B $bids_dir:/HBCD \
+        singularity run -B $bids_dir:/bids \
         -B $output_dir:/out \
         $container /bids /out $analysis_level
 

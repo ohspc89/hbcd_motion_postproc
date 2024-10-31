@@ -26,14 +26,14 @@ As described in the installation section, this tool is meant to be
 interacted with in containerized form. 
 The example below shows the general layout for how you may want to
 interact with the container to conduct processing if you have the
-container downloaded as a docker image: ::
+``singularity`` container::
 
         bids_dir=/path/to/bids_dir
         output_dir=/path/to/output_dir
         container=/path/to/container
         analysis_level=participant
 
-        singularity run -B $bids_dir:/HBCD \
+        singularity run -B $bids_dir:/bids \
         -B $output_dir:/out \
         $container /bids /out $analysis_level
 

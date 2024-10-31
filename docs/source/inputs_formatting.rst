@@ -79,7 +79,7 @@ Each \*\_motion.tsv file will have seven columns:
 
 .. note::
 
-   Users interested in conducting their own analysesand not using the processing container 
+   Users interested in conducting their own analyses and not using the processing container 
    first need to calibrate c] and d] using a] and b], respectively. They can then use
    *calibrated* c] and d] to proceed with their custom analyses.
 
