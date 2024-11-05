@@ -6,8 +6,8 @@ project = 'hbcd-motion-postproc'
 copyright = '2024, Infant Neuromotor Control Laboratory'
 author = 'Jinseok Oh'
 
-release = '0.1'
-version = '0.1.0'
+release = '1.0'
+version = '1.0.0'
 
 # -- General configuration
 

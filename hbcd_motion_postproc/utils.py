@@ -49,7 +49,9 @@ def get_age_from_tsv(
     df = pd.read_csv(str(bids_tsv), sep='\t')
     age_col = None
 
-    for column in ('age_years', 'age'):
+    # 'age_years' should not be present...
+    # but keeping the legacy
+    for column in ('age', 'age_years'):
         if column in df.columns:
             age_col = column
             break
@@ -69,7 +71,7 @@ def get_age_from_tsv(
         return
 
     if age_col == 'age':
-        # verify age is in months
+        # verify age is in "years"
         bids_json = bids_tsv.with_suffix('.json')
         age_units = _get_age_units(bids_json)
         if age_units is False:
