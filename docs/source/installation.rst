@@ -7,7 +7,7 @@ or `Docker <https://docs.docker.com/get-started/>`_ image.
 Option 1: Singularity
 ---------------------
 If you are new to it, start by installing Singularity following this
-`instructions <https://docs.sylabs.io/guides/3.7/user-guide/quick_start.html#download-singularity-from-a-release>`_ .
+`instructions <https://docs.sylabs.io/guides/3.7/user-guide/quick_start.html#quick-installation-steps>`_ .
 
 Then use the following command to pull the docker image as a singularity: ::
         
@@ -55,10 +55,8 @@ After installing Docker Desktop, run the application. This will launch the
 Docker Daemon and you will be able to use the `docker pull` command 
 described at the top of this page.
 
-Using the command line
-^^^^^^^^^^^^^^^^^^^^^^
 Use the following command to pull the docker image. Again, if unsure of the version to use,
-use the tag:`latest`. ::
+use the tag: `latest`. ::
 
         docker pull inclab/hbcd_motion_postproc:latest
 
