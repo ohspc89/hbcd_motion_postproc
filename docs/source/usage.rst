@@ -47,7 +47,7 @@ where `version_num` is the specific tag of the image you pulled.
 
 To see more specific information about how this tool expects
 the inputs to be formatted (i.e. file naming conventions),
-see the inputs formatting page.
+see :ref:`inputs`.
 
 .. _command-line-args:
 
