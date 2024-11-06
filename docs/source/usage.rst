@@ -26,7 +26,7 @@ As described in the installation section, this tool is meant to be
 interacted with in containerized form. 
 The example below shows the general layout for how you may want to
 interact with the container to conduct processing if you have the
-``singularity`` container::
+Singularity container::
 
         bids_dir=/path/to/bids_dir
         output_dir=/path/to/output_dir
@@ -36,6 +36,14 @@ interact with the container to conduct processing if you have the
         singularity run -B $bids_dir:/bids \
         -B $output_dir:/out \
         $container /bids /out $analysis_level
+
+If you use Docker instead, use the following command to interact::
+
+        docker run -it -v $bids_dir:/bids_dir \
+        inclab/hbcd_motion_postproc:<version_num> \
+        /bids_dir /output_dir $analysis_level
+
+where `version_num` is the specific tag of the image you pulled.
 
 To see more specific information about how this tool expects
 the inputs to be formatted (i.e. file naming conventions),
