@@ -4,6 +4,12 @@ Installation
 The intended use of this pipeline is through the use of `Singularity <https://docs.sylabs.io/guides/3.7/user-guide/index.html>`_
 or `Docker <https://docs.docker.com/get-started/>`_ image.
 
+.. note::
+   If you are an independent researcher working on a Windows machine or a Mac,
+   :ref:`option2-docker` is recommended.
+
+.. _option1-singularity:
+
 Option 1: Singularity
 ---------------------
 If you are new to it, start by installing Singularity following this
@@ -42,6 +48,7 @@ where the following folder hierarchy is assumed in this case: ::
         |   |   |-- sub-<label>_ses-<label>_scans.tsv
         |   |   |-- sub-<label>_ses-<label>_scans.json
 
+.. _option2-docker:
 
 Option 2: Docker
 ----------------
@@ -58,7 +65,7 @@ described at the top of this page.
 Use the following command to pull the docker image. Again, if unsure of the version to use,
 use the tag: `latest`. ::
 
-        docker pull inclab/hbcd_motion_postproc:latest
+        docker pull inclab/hbcd_motion_postproc:<version_num>
 
 Building the image from the scratch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,6 +81,7 @@ Running the container using Docker is similar to doing so with Singularity. Here
         inclab/hbcd_motion_postproc:<version_num> \
         /bids_dir /output_dir $analysis_level
 
-Both *bids_dir* and *output_dir* should be provided as *absolute path* s
+Both *bids_dir* and *output_dir* should be provided as *absolute paths*
+
 (ex. "/Users/user1/Documents/DATA", "/home/user1/Documents/DATA" or "C:/Documents/DATA")
 
