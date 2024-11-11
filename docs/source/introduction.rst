@@ -33,7 +33,7 @@ of a desk or table). Wait 10 seconds. Rotate it so that it is resting
 on its next flat surface. Wait 10 seconds. You should put the sensor in 6
 different positions and collect 10 seconds of data in each position,
 so just over a minute of data in total (including the time to rotate it).
-It does not matter what order you do this in.
+It does not matter what order you do this in."
 
 Data files included in the data release are raw sensor data in `BIDS <https://bids.neuroimaging.io>`_
 format for the calibration and 72-hour files for the right and the left leg
