@@ -18,8 +18,8 @@ Survey data
   This survey was created by the workgroup.
 
 A research assistant (RA) marked preferred contact and preferred method of contact
-(email or text message) at visit, then surveys were sent automatically. Spanish
-translation was available.
+(email or text message) at visit, then surveys were sent automatically. Surveys were
+provided in Spanish or English per family preference.
 
 Survey data collection occurred at **V02 (0-1 months of age)** and at **V03
 (3-8 months of age)**.

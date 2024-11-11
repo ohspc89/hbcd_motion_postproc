@@ -95,17 +95,17 @@ Processed data outputs: d] ~ i]
 +--------------------------------+-----------------------------------------------------------------------------+
 | Left_movement_duration_iqr     | inter-quartile-range of the durations of the left leg movements             |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Right_average_acc_median       | median of the average accelerations of left leg movements                   |
+| Right_average_acc_median       | median of the average accelerations of right leg movements                  |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Right average_acc_iqr          | inter-quartile-range of the average accelerations of left leg movements     |
+| Right average_acc_iqr          | inter-quartile-range of the average accelerations of right leg movements    |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Right_peak_acc_median          | median of the peak accelerations of left leg movements                      |
+| Right_peak_acc_median          | median of the peak accelerations of right leg movements                     |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Right_peak_acc_iqr             | inter-quartile-range of the peak accelerations of left leg movements        |
+| Right_peak_acc_iqr             | inter-quartile-range of the peak accelerations of right leg movements       |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Right_movement_duration_median | median of the durations of left leg movements                               |
+| Right_movement_duration_median | median of the durations of right leg movements                              |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Right_movement_duration_iqr    | inter-quartile-range of the durations of the left leg movements             |
+| Right_movement_duration_iqr    | inter-quartile-range of the durations of the right leg movements            |
 +--------------------------------+-----------------------------------------------------------------------------+
 | entropies                      | sample entropy (SampEn) and/or fuzzy entropy (FuzzEn) of a time series      |
 |                                | (average_acc or peak_acc)                                                   |
