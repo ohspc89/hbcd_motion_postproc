@@ -44,7 +44,8 @@ Quality Control (QC) Processes
   contact or prefereed method of communication not selected by RA) or potentially
   technological malfunction, and sometimes it was caregiver non-response. Caregiver
   non-response was the reason for the majority of the surveys without responses.
-  Caregiver non-response was common.
+  Caregiver non-response was common. Please consider that occurrence of caregiver
+  non-response may not be randomly distributed across the sample.
 
 
 Potential Issues Flagged by Subject Matter Experts
