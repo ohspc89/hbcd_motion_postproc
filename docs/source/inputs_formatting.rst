@@ -38,7 +38,7 @@ The expected names of the files (with \*\ denoting wildcard) are as follows::
 | 72-hour files will have the ``acq-`` label: ``primary``.
 
 | Files that contain left leg movements will have the ``task`` label: ``LeftLegMovement``.
-| Files that contain right leg movements have the ``task`` label: ``RightLegMovement``.
+| Files that contain right leg movements will have the ``task`` label: ``RightLegMovement``.
 
 | For each combination (ex. ``task-LeftLegMovement`` & ``acq-calibration``) there will be 4 associated files. 
 | In total, **16 files** (4 combinations * 4 files) are expected.
@@ -46,8 +46,8 @@ The expected names of the files (with \*\ denoting wildcard) are as follows::
 Raw time-series data (\*\_motion.tsv)
 -------------------------------------
 
-A ``\*\_motion.tsv`` is a recording of either calibration dataset or 72 hours of leg movement.
-There should be four ``\*\_motion.tsv`` files::
+A ``*_motion.tsv`` is a recording of either calibration dataset or 72 hours of leg movement.
+There should be four ``*_motion.tsv`` files::
 
     # Calibration files
     a] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv
@@ -57,7 +57,7 @@ There should be four ``\*\_motion.tsv`` files::
     c] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_motion.tsv
     d] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_motion.tsv
 
-Each ``\*\_motion.tsv`` file will have seven columns:
+Each ``*_motion.tsv`` file will have seven columns:
 
 +--------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 | t\ :sub:`0`\ | a\ :sub:`x`\ (t\ :sub:`0`\ ) | a\ :sub:`y`\ (t\ :sub:`0`\ ) | a\ :sub:`z`\ (t\ :sub:`0`\ ) | ω\ :sub:`x`\ (t\ :sub:`0`\ ) | ω\ :sub:`y`\ (t\ :sub:`0`\ ) | ω\ :sub:`z`\ (t\ :sub:`0`\ ) |
@@ -75,7 +75,7 @@ Each ``\*\_motion.tsv`` file will have seven columns:
   along the three measurement axes.
 | ω\ :sub:`x`\ (t\ :sub:`i`\ ), ω\ :sub:`y`\ (t\ :sub:`i`\ ), ω\ :sub:`z`\ (t\ :sub:`i`\ )
   are the gyroscope readings at time t\ :sub:`i`\  along its three measurement axes. 
-| Further information about each column can be found in ``\*\_channels.tsv``. 
+| Further information about each column can be found in ``*_channels.tsv``. 
 
 .. note::
 
@@ -86,8 +86,8 @@ Each ``\*\_motion.tsv`` file will have seven columns:
 Metadata to a specific tracking system (\*\_motion.json)
 --------------------------------------------------------
 
-A ``\*\_motion.json`` contains metadata to the sensor used for preparing either a calibration file
-or a 72-hour file. There should be four ``\*\_motion.json`` files::
+A ``*_motion.json`` contains metadata to the sensor used for preparing either a calibration file
+or a 72-hour file. There should be four ``*_motion.json`` files::
 
     # Calibration files
     e] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.json
@@ -115,8 +115,8 @@ Items listed in each file are:
 Metadata to the recorded channels (\*\_channels.tsv)
 ----------------------------------------------------
 
-A ``\*\_channels.tsv`` provides details about each column of ``\*\_motion.tsv``. 
-There should be four ``\*\_channels.tsv`` files::
+A ``*_channels.tsv`` provides details about each column of ``*_motion.tsv``. 
+There should be four ``*_channels.tsv`` files::
 
     # Calibration files
     i] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.tsv
@@ -126,7 +126,7 @@ There should be four ``\*\_channels.tsv`` files::
     k] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-primary_channels.tsv
     l] sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-primary_channels.tsv
 
-Each ``\*\_channels.tsv`` file will have seven rows and seven columns. For example, i] for one subject is:
+Each ``*_channels.tsv`` file will have seven rows and seven columns. For example, i] for one subject is:
 
 +-------------------+-----------+---------+---------------+---------+--------------------+-----------------+
 | name              | component | type    | tracked_point | units   | sampling_frequency | reference_frame |
@@ -164,10 +164,10 @@ Rows
 Metadata complementing \*\_channels.tsv (\*\_channels.json)
 -----------------------------------------------------------
 
-A ``\*\_channels.json`` describes the spatial properties of the reference frame used to
+A ``*_channels.json`` describes the spatial properties of the reference frame used to
 prepare sensor movement dataset are represented.
 Positive X, Y, and Z sensor axes correspond to anterior, right, superior, respectively.
-There should be four ``\*\_channels.json`` files::
+There should be four ``*_channels.json`` files::
 
     # Calibration files
     m] sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibratioin_channels.json
