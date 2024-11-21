@@ -9,6 +9,6 @@ HBCD_MOTION_POSTPROC
 
 This tool is used for processing movement sensor (Axivity Ax6) data.
 
-Read the tutorial here:
+## Getting Started
 
-https://hbcd-motion-postproc.readthedocs.io/en/latest
+Detailed information about the installation and the use of the pipeline can be found from our [documentation](https://hbcd-motion-postproc.readthedocs.io/en/latest)
