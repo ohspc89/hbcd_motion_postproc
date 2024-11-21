@@ -1,4 +1,5 @@
-[![DOI](https://zenodo.org/badge/867238460.svg)](https://doi.org/10.5281/zenodo.14200420)
+.. image:: https://zenodo.org/badge/867238460.svg
+  :target:: https://doi.org/10.5281/zenodo.14200420
 
 HBCD_MOTION_POSTPROC
 =======================================
