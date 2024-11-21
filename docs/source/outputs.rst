@@ -42,10 +42,10 @@ Please refer to :ref:`command-line-args` in the usage documentation for see poss
 choices for each parameter.
 
 b] and c] are 72 hour left and right leg movement data. They are first calibrated using
-(found in */bids_dir/sub-<label>/ses-<label>/motion/*):
+(found in ``/bids_dir/sub-<label>/ses-<label>/motion/``):
 
-* *sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv*
-* *sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv*
+* ``sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv``
+* ``sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv``
 
 and then resampled at 20 Hz. These files are required for the estimation of physical activity levels (f] - i]).
 
@@ -112,9 +112,9 @@ Processed data outputs: d] ~ i]
 +--------------------------------+-----------------------------------------------------------------------------+
 
 
-| f] lists the parameters provided to process data and generate \*\PA_RAW.json,
-  \*\PA_SUMMARY.json, and \*\PA_BOUTS.tsv (\*\ denotes wildcard). 
-| In addition, the content of \*\PA_SUMMARY.json is available in this file.
+| f] lists the parameters provided to process data and generate ``\*\PA_RAW.json``,
+  ``\*\PA_SUMMARY.json``, and ``\*\PA_BOUTS.tsv`` (\*\ denotes wildcard). 
+| In addition, the content of ``\*\PA_SUMMARY.json`` is available in this file.
 
 g] saves bouts of activity as they occur over time. There are 4 columns of data.
 
@@ -140,7 +140,7 @@ g] saves bouts of activity as they occur over time. There are 4 columns of data.
 |  999  |   undefined (could not be computed)  |
 +-------+--------------------------------------+
 
-| h] lists instantaneous levels of avtivity as they occur over time.
+| h] lists instantaneous levels of activity as they occur over time.
 | There are 2 columns of data, separated by commas: Unix epoch time (in seconds)
   at each instance, and classification at each instance. 
   Classification of instance is described in g].

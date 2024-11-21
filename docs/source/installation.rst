@@ -21,7 +21,7 @@ Then use the following command to pull the docker image as a singularity: ::
 
 where version_num denotes the specific version of the container. All available
 versions of the container can be found `here <https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags>`_.
-If you are unsure of which version to use, use the tag:`latest`.
+If you are unsure of which version to use, use the tag:``latest``.
 
 The full usage details can be seen under the :ref:`usage` section, but
 the basic command to run the container using Singularity is as follows: ::
@@ -59,11 +59,11 @@ If you are a Mac user, refer this `website <https://docs.cse.lehigh.edu/determin
 determine the architecture of your machine (Apple silicon vs. Intel chip).
 
 After installing Docker Desktop, run the application. This will launch the
-Docker Daemon and you will be able to use the `docker pull` command 
+Docker Daemon and you will be able to use the ``docker pull`` command 
 described at the top of this page.
 
 Use the following command to pull the docker image. Again, if unsure of the version to use,
-use the tag: `latest`. ::
+use the tag: ``latest``. ::
 
         docker pull inclab/hbcd_motion_postproc:<version_num>
 
