@@ -1,4 +1,4 @@
-.. image:: https://img.shields.io/badge./docker-inclab/hbcd_motion_postproc-brightgreen.svg?logo=docker$style=flat
+.. image:: https://img.shields.io/badge/docker-inclab/hbcd_motion_postproc-brightgreen.svg?logo=docker$style=flat
    :target: https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags/
 .. image:: https://readthedocs.org/projects/hbcd_motion_postproc/badge/?version=latest
    :target: https://hbcd-motion-postproc.readthedocs.io/en/latest/
