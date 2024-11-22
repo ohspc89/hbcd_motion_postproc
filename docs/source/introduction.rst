@@ -1,3 +1,10 @@
+.. image:: https://img.shields.io/badge./docker-inclab/hbcd_motion_postproc-brightgreen.svg?logo=docker$style=flat
+   :target: https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags/
+.. image:: https://readthedocs.org/projects/hbcd_motion_postproc/badge/?version=latest
+   :target: https://hbcd-motion-postproc.readthedocs.io/en/latest/
+.. image:: https://zenodo.org/badge/867238460.svg
+   :target: https://doi.org/10.5281/zenodo.14200420
+
 Introduction
 ============
 
