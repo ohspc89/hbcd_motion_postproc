@@ -1,4 +1,4 @@
-[![dockerhub](https://img.shields.io/badge/docker-inclab/hbcd_motion_postproc-brightgreen.svg?logo=docker&style=flat)](https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags/)
+![Docker Image Version](https://img.shields.io/docker/v/inclab/hbcd_motion_postproc?logo=docker&label=DockerHub&color=orange&link=https%3A%2F%2Fhub.docker.com%2Fr%2Finclab%2Fhbcd_motion_postproc%2Ftags%2F)
 [![documentation](https://readthedocs.org/projects/hbcd_motion_postproc/badge/?version=latest)](https://hbcd-motion-postproc.readthedocs.io/en/latest/)
 [![DOI](https://zenodo.org/badge/867238460.svg)](https://doi.org/10.5281/zenodo.14200420)
 
