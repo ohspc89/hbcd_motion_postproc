@@ -38,20 +38,20 @@ a] lists the parameters provided when using the docker container.
 * entropy_type
 * entropy_measure
 
-Please refer to :ref:`command-line-args` in the usage documentation for see possible
+Please refer to :ref:`command-line-args` in the usage documentation to see possible
 choices for each parameter.
 
-b] and c] are 72 hour left and right leg movement data. They are first calibrated using
+b] and c] are 72-hour left and right leg movement data. They are first calibrated using
 (found in ``/bids_dir/sub-<label>/ses-<label>/motion/``):
 
 * ``sub-<label>_ses-<label>_task-LeftLegMovement_tracksys-imu_acq-calibration_motion.tsv``
 * ``sub-<label>_ses-<label>_task-RightLegMovement_tracksys-imu_acq-calibration_motion.tsv``
 
-and then resampled at 20 Hz. These files are required for the estimation of physical activity levels (f] - i]).
+and then resampled at 20 Hz. These files are required to estimate physical activity levels (f] - i]).
 
 Processed data outputs: d] ~ i]
 -------------------------------
-| d] and e] contain summary kinematic measures based on the 72 hour leg movement data. 
+| d] and e] contain summary kinematic measures based on the 72-hour leg movement data. 
 | d] is based on the resampled data, a] and b], and e] is based on the non-resampled data
   (No intermediate data files exist). 
 | Please refer to the table below to understand what each measure is about: 
@@ -69,7 +69,7 @@ Processed data outputs: d] ~ i]
 +--------------------------------+-----------------------------------------------------------------------------+
 | Left_negative_threshold        | a negative acceleration magnitude threshold to identify left leg movements  |
 +--------------------------------+-----------------------------------------------------------------------------+
-| Left_positive_threshold        | a negative cceleration magnitude threshold to identify right leg movements  |
+| Left_positive_threshold        | a negative acceleration magnitude threshold to identify right leg movements |
 +--------------------------------+-----------------------------------------------------------------------------+
 | Left_total_count               | the total left leg movement count                                           |
 +--------------------------------+-----------------------------------------------------------------------------+
@@ -112,9 +112,9 @@ Processed data outputs: d] ~ i]
 +--------------------------------+-----------------------------------------------------------------------------+
 
 
-| f] lists the parameters provided to process data and generate ``\*\PA_RAW.json``,
-  ``\*\PA_SUMMARY.json``, and ``\*\PA_BOUTS.tsv`` (\*\ denotes wildcard). 
-| In addition, the content of ``\*\PA_SUMMARY.json`` is available in this file.
+| f] lists the parameters provided to process data and generate ``*PA_RAW.json``,
+  ``*PA_SUMMARY.json``, and ``*PA_BOUTS.tsv`` (\*\ denotes wildcard). 
+| In addition, the content of ``*PA_SUMMARY.json`` is available in this file.
 
 g] saves bouts of activity as they occur over time. There are 4 columns of data.
 
