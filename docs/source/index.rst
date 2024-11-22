@@ -1,7 +1,6 @@
 Welcome to hbcd_motion_postproc's documentation!
 ================================================
-.. image:: https://img.shields.io/docker/v/inclab/hbcd_motion_postproc?logo=docker&label=DockerHub&color=orange
-   :target: https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags/
+.. image:: https://img.shields.io/docker/v/inclab/hbcd_motion_postproc?logo=docker&label=DockerHub&color=orange&link= https%3A%2F%2Fhub.docker.com%2Fr%2Finclab%2Fhbcd_motion_proc%2Ftags%2F
 .. image:: https://readthedocs.org/projects/hbcd_motion_postproc/badge/?version=latest
    :target: https://hbcd-motion-postproc.readthedocs.io/en/latest/
 .. image:: https://zenodo.org/badge/867238460.svg
