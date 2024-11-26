@@ -25,4 +25,3 @@ inertial measurement units (IMUs).
    usage
    inputs_formatting
    outputs
-   survey
