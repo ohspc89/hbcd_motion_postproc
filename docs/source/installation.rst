@@ -40,7 +40,7 @@ Then use the following command to pull the docker image as a ``Singularity``: ::
         
         singularity pull docker://inclab/hbcd_motion_postproc:<version_num>
 
-where version_num denotes the specific version of the container. All available
+where ``version_num`` denotes the specific version of the container. All available
 versions of the container can be found `here <https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags>`_.
 If you are unsure of which version to use, use the tag: ``latest``.
 
