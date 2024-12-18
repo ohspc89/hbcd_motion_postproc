@@ -22,7 +22,7 @@ As the guide specifies, SingularityCE cannot run natively on Windows or Mac.
 
 On a Windows Machine
 ^^^^^^^^^^^^^^^^^^^^
-Please refer to this `page <https://www.blopig.com/blog/2021/09/using-singularity-on-windows-with-wsl2/>`_
+Please refer to this `blog <https://www.blopig.com/blog/2021/09/using-singularity-on-windows-with-wsl2/>`_
 to install ``Windows System for Linux (WSL2)`` and then install SingularityCE.
 
 .. note::
@@ -33,7 +33,7 @@ to install ``Windows System for Linux (WSL2)`` and then install SingularityCE.
 
 On a Mac Machine
 ^^^^^^^^^^^^^^^^
-With ``brew`` installed, please refer to this `page <https://github.com/lima-vm/lima?tab=readme-ov-file#getting-started>`_
+With ``brew`` installed, please refer to this `README <https://github.com/lima-vm/lima?tab=readme-ov-file#getting-started>`_
 to install ``lima`` and then install SingularityCE.
 
 Then use the following command to pull the docker image as a ``Singularity``: ::
