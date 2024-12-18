@@ -5,19 +5,40 @@ The intended use of this pipeline is through the use of `Singularity <https://do
 or `Docker <https://docs.docker.com/get-started/>`_ image.
 
 .. note::
-   If you are an independent researcher working on a Windows machine or a Mac,
-   :ref:`option2-docker` is recommended.
+   Please refer to `Docker Desktop license agreement <https://docs.docker.com/subscription/desktop-license/>`_ 
+   if you are using :ref:`option2-docker`. 
+   Basically, if you are working at a research institute that has more than 250 employees AND
+   more than $10 million in annual revenue, you need a paid subscription to use the service.
 
 .. _option1-singularity:
 
 Option 1: Singularity
 ---------------------
-If you are new to it, start by installing ``Singularity`` following this
-`instructions <https://docs.sylabs.io/guides/3.7/user-guide/quick_start.html#quick-installation-steps>`_ .
+If you are new to it, start by installing ``SingularityCE`` following this
+`instructions <https://docs.sylabs.io/guides/4.2/user-guide/quick_start.html#quick-installation-steps>`_ .
+This page assumes users to install SingularityCE 4.2, the latest version as of Dec 18, 2024.
+
+As the guide specifies, SingularityCE cannot run natively on Windows or Mac.
+
+On a Windows Machine
+^^^^^^^^^^^^^^^^^^^^
+Please refer to this `page <https://www.blopig.com/blog/2021/09/using-singularity-on-windows-with-wsl2/>`_
+to install ``Windows System for Linux (WSL2)`` and then install SingularityCE.
+
+.. note::
+   Ubuntu 22.04.5 (LTS) has been tested instead of 20.04 (LTS) showcased in the blog post.
+   Also, you may need to install more dependencies than what's described in the blog post.
+   Prioritize this `page <https://docs.sylabs.io/guides/4.2/admin-guide/installation.html#install-dependencies>`_
+   when installing system dependencies.
+
+On a Mac Machine
+^^^^^^^^^^^^^^^^
+With ``brew`` installed, please refer to this `page <https://github.com/lima-vm/lima?tab=readme-ov-file#getting-started>`_
+to install ``lima`` and then install SingularityCE.
 
 Then use the following command to pull the docker image as a ``Singularity``: ::
         
-        singularity pull docker:://inclab/hbcd_motion_postproc:<version_num>
+        singularity pull docker://inclab/hbcd_motion_postproc:<version_num>
 
 where version_num denotes the specific version of the container. All available
 versions of the container can be found `here <https://hub.docker.com/r/inclab/hbcd_motion_postproc/tags>`_.
@@ -47,6 +68,9 @@ where the following folder hierarchy is assumed in this case: ::
         |   |   |-- motion/
         |   |   |-- sub-<label>_ses-<label>_scans.tsv
         |   |   |-- sub-<label>_ses-<label>_scans.json
+
+.. note::
+   Please create your ``output_dir`` before running Singularity if you are running WSL2.
 
 .. _option2-docker:
 
