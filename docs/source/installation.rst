@@ -35,6 +35,9 @@ On a Mac Machine
 ^^^^^^^^^^^^^^^^
 With ``brew`` installed, please refer to this `README <https://github.com/lima-vm/lima?tab=readme-ov-file#getting-started>`_
 to install ``lima`` and then install SingularityCE.
+Please refer to this `instructions <https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fmemes%2Fcomments%2F12hjwxe%2Fthis_is_the_way%2F&psig=AOvVaw3aETNOb4uGKSx45sFZEYEL&ust=1734726277692000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDI0I7VtIoDFQAAAAAdAAAAABAJ>`_ for help. 
+
+Your institution's firewall setting may interfere with the installation. Then an alternative option is to use `vagrant <https://pawseysc.github.io/singularity-containers/44-setup-singularity/index.html>`_. Again if your institution's firewall setting is strict, please download the virtual box using ``--insecure`` argument (check the accepted answer to this `posting <https://stackoverflow.com/questions/42718527/vagrant-up-command-throwing-ssl-error>`_).
 
 Then use the following command to pull the docker image as a ``Singularity``: ::
         
