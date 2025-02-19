@@ -23,5 +23,6 @@ inertial measurement units (IMUs).
    introduction
    installation
    usage
+   testing
    inputs_formatting
    outputs
