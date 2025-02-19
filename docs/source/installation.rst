@@ -33,7 +33,7 @@ to install ``Windows System for Linux (WSL2)`` and then install SingularityCE.
 
 On a Mac Machine
 ^^^^^^^^^^^^^^^^
-Please refer to this `guide <https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fmemes%2Fcomments%2F12hjwxe%2Fthis_is_the_way%2F&psig=AOvVaw3aETNOb4uGKSx45sFZEYEL&ust=1734726277692000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDI0I7VtIoDFQAAAAAdAAAAABAJ>`_ to install SingularityCE with ``lima``.
+Please refer to this `guide <https://docs.sylabs.io/guides/latest/admin-guide/installation.html#mac>`_ to install SingularityCE with ``lima``.
 
 Your institution's firewall setting may interfere with the installation. Then an alternative option is to use `vagrant <https://pawseysc.github.io/singularity-containers/44-setup-singularity/index.html>`_. Again if your institution's firewall setting is strict, please download the virtual box using ``--insecure`` argument (check the accepted answer to this `posting <https://stackoverflow.com/questions/42718527/vagrant-up-command-throwing-ssl-error>`_).
 
