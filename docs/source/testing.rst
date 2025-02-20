@@ -35,7 +35,7 @@ If the processing pipeline works properly, you should see a screen like below:
 
 .. note::
 
-I added ``--entropy_type SampEn`` to reduce the CPU load. Calculating `FuzzEn` requires a lot of computing power, so the process may terminate.
+   I added ``--entropy_type SampEn`` to reduce the CPU load. Calculating `FuzzEn` requires a lot of computing power, so the process may terminate.
 
 Once the entire process is completed, you should see files are populated in your ``bids_out`` folder.
 
