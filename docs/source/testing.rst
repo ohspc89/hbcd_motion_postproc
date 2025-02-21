@@ -42,3 +42,5 @@ Once the entire process is completed, you should see files are populated in your
 .. image:: images/sample_out.png
    :width: 600
 
+Your folder structure and generated files should be identical to what's showcased in `HBCD_OUT <https://osf.io/hpv9y/files/osfstorage>`_.
+
