@@ -7,6 +7,21 @@ This page provides details on the raw sensor data in BIDS format
 for the calibration and 72-hour files for the right leg and the left leg,
 which are provided as data inputs to the processing container.
 
+Downloading from LASSO
+----------------------
+
+When you try to download the raw BIDS files, you will see a screen below::
+
+.. image:: images/lasso_raw.png
+
+Under 'Raw', choose ``motion``. You will see three categories - ``acq``, ``task``, and ``tracksys``.
+Clicking any of the options once will **deselect** the category. See the example image below (``CALIBRATION`` and ``RIGHTLEGMOVEMENT`` are not selected)::
+
+.. image:: images/lasso_raw_deselect.png
+
+To understand what each of ``acq``, ``task``, and ``tracysys`` means, see :ref: `_naming_conventions`.
+
+
 BIDS directory
 --------------
 
@@ -34,6 +49,11 @@ The expected names of the files (with \*\ denoting wildcard) are as follows::
 | ``sub-<label>_ses-<label>_scans.tsv`` will have the age of the subject at the data collection.
 | The age is in years (represented up to 3 decimal places).
 
+.. _naming_conventions:
+
+Naming conventions
+^^^^^^^^^^^^^^^^^^
+
 | Calibration files will have the acquisition (``acq-``) label: ``calibration``.
 | 72-hour files will have the ``acq-`` label: ``primary``.
 
@@ -42,6 +62,8 @@ The expected names of the files (with \*\ denoting wildcard) are as follows::
 
 | For each combination (ex. ``task-LeftLegMovement`` & ``acq-calibration``) there will be 4 associated files. 
 | In total, **16 files** (4 combinations * 4 files) are expected.
+
+``tracksys-imu`` indicates that inertial measurement units (IMUs) were used to measure leg movements.
 
 Raw time-series data (\*\_motion.tsv)
 -------------------------------------
