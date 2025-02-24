@@ -21,7 +21,7 @@ Clicking any of the options once will **deselect** the category. See the example
 .. image:: images/lasso_raw_deselect.png
    :width: 600
 
-To understand what each of ``acq``, ``task``, and ``tracysys`` means, see :ref:`_naming_conventions`.
+To understand what each of ``acq``, ``task``, and ``tracysys`` means, see :ref:`_naming-conventions`.
 
 
 BIDS directory
@@ -51,7 +51,7 @@ The expected names of the files (with \*\ denoting wildcard) are as follows::
 | ``sub-<label>_ses-<label>_scans.tsv`` will have the age of the subject at the data collection.
 | The age is in years (represented up to 3 decimal places).
 
-.. _naming_conventions:
+.. _naming-conventions:
 
 Naming conventions
 ^^^^^^^^^^^^^^^^^^
