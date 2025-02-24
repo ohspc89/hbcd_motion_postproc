@@ -21,7 +21,7 @@ Clicking any of the options once will **deselect** the category. See the example
 .. image:: images/lasso_raw_deselect.png
    :width: 600
 
-To understand what each of ``acq``, ``task``, and ``tracysys`` means, see :ref:`_naming-conventions`.
+To understand what each of ``acq``, ``task``, and ``tracysys`` means, see :ref:`naming-conventions`.
 
 
 BIDS directory
