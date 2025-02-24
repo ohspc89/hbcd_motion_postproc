@@ -10,13 +10,13 @@ which are provided as data inputs to the processing container.
 Downloading from LASSO
 ----------------------
 
-When you try to download the raw BIDS files, you will see a screen below::
+When you try to download the raw BIDS files, you will see a screen below:
 
 .. image:: images/lasso_raw.png
    :width: 600
 
 Under 'Raw', choose ``motion``. You will see three categories - ``acq``, ``task``, and ``tracksys``.
-Clicking any of the options once will **deselect** the category. See the example image below (``CALIBRATION`` and ``RIGHTLEGMOVEMENT`` are not selected)::
+Clicking any of the options once will **deselect** the category. See the example image below (``CALIBRATION`` and ``RIGHTLEGMOVEMENT`` are not selected):
 
 .. image:: images/lasso_raw_deselect.png
    :width: 600
