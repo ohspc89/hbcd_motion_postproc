@@ -5,7 +5,7 @@ To test HBCD-motion to ensure it's working as expected, please do the following:
 
 Download Test Data
 ------------------
-Download ``sub-21135.zip`` from `here <https://doi.org/10.17605/OSF.IO/HPV9Y>`_.
+Download ``sub-21135.zip`` from `here <https://doi.org/10.17605/osf.io/rq3et>`_.
 
 .. image:: images/test_instructions1.png
    :width: 600
@@ -42,5 +42,5 @@ Once the entire process is completed, you should see files are populated in your
 .. image:: images/sample_out.png
    :width: 600
 
-Your folder structure and generated files should be identical to what's showcased in `HBCD_OUT <https://osf.io/hpv9y/files/osfstorage>`_.
+Your folder structure and generated files should be identical to what's showcased in `HBCD_OUT <https://osf.io/rq3et/files/osfstorage>`_.
 
