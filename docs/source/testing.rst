@@ -5,7 +5,7 @@ To test HBCD-motion to ensure it's working as expected, please do the following:
 
 Download Test Data
 ------------------
-Download ``sub-21135.zip`` from `here <https://doi.org/10.17605/osf.io/rq3et>`_.
+Download ``sample_hbcd.zip`` from `here <https://doi.org/10.17605/osf.io/rq3et>`_.
 
 .. image:: images/test_instructions1.png
    :width: 600
@@ -13,20 +13,33 @@ Download ``sub-21135.zip`` from `here <https://doi.org/10.17605/osf.io/rq3et>`_.
 .. image:: images/test_instructions2.png
    :width: 600
 
-Once you extract the file, you should see a folder named sub-21135. The folder should be structured in the following way:
+Once you extract the file, you should see a folder named ``sample_hbcd``. The folder should be structured in the following way:
 
 .. image:: images/folder_structure.png
    :width: 600
 
 Execute HBCD-motion
 -------------------
-If you haven't already, set up HBCD-motion following instructions from this `page <https://hbcd-motion-postproc.readthedocs.io/en/latest/installation.html>`_. Then execute the processing pipeline with the test data, e.g.: ::
+If you haven't already, set up HBCD-motion following instructions from this `page <https://hbcd-motion-postproc.readthedocs.io/en/latest/installation.html>`_. Then execute the processing pipeline with the test data using ``singularity``::
 
-        bids_dir=/path/to/sub-21135 (ex. /Users/joh/Downloads/sub-21135 if working on a Mac)
+        bids_dir=/path/to/sub-21135 (ex. /Users/joh/Downloads/sample_hbcd if working on a Mac)
         bids_out=/path/to/output/folder (ex. /Users/joh/Downloads/HBCD_out)
         container=/path/to/container (ex. /Users/joh/Downloads/hbcd_motion_postproc_latest.sif)
         analysis_level=participant
         singularity run -B $bids_dir:/bids -B $bids_out:/out $container /bids /out $analysis_level --entropy_type SampEn
+
+If you use ``docker`` to process, 1) run the docker desktop, 2) open terminal and type the following::
+
+      bids_dir=/path/to/sub-21135
+      output_dir=/path/to/output/folder
+      analysis_level=participant
+      docker run -it -v $bids_dir:/bids_dir inclab/hbcd_motion_postproc:<version_number> /bids_dir $output_dir $analysis_level --entropy_type SampEn
+
+This is an example:
+
+.. image:: images/docker_test.png
+   :width: 600
+
 
 If the processing pipeline works properly, you should see a screen like below:
 
