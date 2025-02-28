@@ -41,7 +41,7 @@ If you use ``Docker`` instead, use the following command to interact::
 
         docker run -it -v $bids_dir:/bids_dir \
         inclab/hbcd_motion_postproc:<version_num> \
-        /bids_dir /output_dir $analysis_level
+        /bids_dir $output_dir $analysis_level
 
 where ``version_num`` is the specific tag of the image you pulled.
 
