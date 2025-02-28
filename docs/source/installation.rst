@@ -85,15 +85,15 @@ determine the architecture of your machine (Apple silicon vs. Intel chip).
 
 After installing ``Docker Desktop``, run the application. This will launch the
 Docker Daemon and you will be able to use the ``docker pull`` command 
-described at the top of this page.
+described below.
 
 Use the following command to pull the docker image. Again, if unsure of the version to use,
 use the tag: ``latest``. ::
 
         docker pull inclab/hbcd_motion_postproc:<version_num>
 
-Building the image from the scratch
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Option 0: Building the image from the scratch
+---------------------------------------------------
 The image can be built using the ``Dockerfile`` found in the `repository <https://github.com/Infant-Neuromotor-Control-Lab/hbcd_motion_postproc>`_.
 
 Running the container using ``Docker`` is similar to doing so with ``Singularity``. Here is the basic command::
