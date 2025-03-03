@@ -18,6 +18,8 @@ Once you extract the file, you should see a folder named ``sample_hbcd``. The fo
 .. image:: images/folder_structure.png
    :width: 600
 
+.. _execute:
+
 Execute HBCD-motion
 -------------------
 If you haven't already, set up HBCD-motion following instructions from this `page <https://hbcd-motion-postproc.readthedocs.io/en/latest/installation.html>`_. Then execute the processing pipeline with the test data using ``singularity``::
