@@ -103,14 +103,15 @@ use the tag: ``latest``. ::
 Running the container using ``Docker`` is similar to doing so with ``Singularity``. Here is the basic command::
 
         bids_dir=/path/to/bids_dir
+        output_dir_name=HBCD_out
         analysis_level=participant
 
         docker run -it -v $bids_dir:/bids_dir \
         inclab/hbcd_motion_postproc:<version_num> \
-        /bids_dir /bids_dir/output_dir $analysis_level
+        /bids_dir /bids_dir/$output_dir_name $analysis_level
 
 .. note::
-   Note that ``output_dir`` will be a folder named _output_dir_ under ``bids_dir``. Similar to the use of ``Singularity``, ``bids_dir`` should be provided as an *absolute path*
+   Processing output will be stored in the folder named *HBCD_out* under ``bids_dir``. Similar to the use of ``Singularity``, ``bids_dir`` should be provided as an absolute path.
 
 For Advanced Users: Building the image from the scratch
 -------------------------------------------------------
