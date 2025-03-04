@@ -71,7 +71,7 @@ where the following folder hierarchy is assumed in this case: ::
         |   |   |-- sub-<label>_ses-<label>_scans.json
 
 .. note::
-   Please create your ``output_dir`` before running Singularity if you are running WSL2.
+   Please create your ``output_dir`` before running Singularity if you are running WSL2. Also, ``bids_dir`` and ``output_dir`` needs to be provided as absolute paths (ex. ``/Users/user1/Documents/DATA``, ``/home/user1/Documents/DATA`` or ``C:/Documents/DATA``).
 
 .. _option2-docker:
 
@@ -83,8 +83,16 @@ this `link <https://docs.docker.com/get-started/introduction/get-docker-desktop/
 If you are a Mac user, refer this `website <https://docs.cse.lehigh.edu/determine-mac-architecture/>`_ to
 determine the architecture of your machine (Apple silicon vs. Intel chip).
 
-After installing ``Docker Desktop``, run the application. This will launch the
-Docker Daemon and you will be able to use the ``docker pull`` command 
+After installing ``Docker Desktop``, please go to **System Settings** and manually grant full disk access to Docker.
+
+.. image:: /images/macOS_docker_prereq1.png
+   :width: 300
+
+.. image:: /images/macOS_docker_prereq2.png
+   :width: 300
+
+Finally, run the application. This will launch the Docker Daemon 
+and you will be able to use the ``docker pull`` command 
 described below.
 
 Use the following command to pull the docker image. Again, if unsure of the version to use,
@@ -92,21 +100,18 @@ use the tag: ``latest``. ::
 
         docker pull inclab/hbcd_motion_postproc:<version_num>
 
-Option 0: Building the image from the scratch
----------------------------------------------------
-The image can be built using the ``Dockerfile`` found in the `repository <https://github.com/Infant-Neuromotor-Control-Lab/hbcd_motion_postproc>`_.
-
 Running the container using ``Docker`` is similar to doing so with ``Singularity``. Here is the basic command::
 
         bids_dir=/path/to/bids_dir
-        output_dir=/path/to/output_dir
         analysis_level=participant
 
         docker run -it -v $bids_dir:/bids_dir \
         inclab/hbcd_motion_postproc:<version_num> \
-        /bids_dir /output_dir $analysis_level
+        /bids_dir /bids_dir/output_dir $analysis_level
 
-Both ``bids_dir`` and ``output_dir`` should be provided as *absolute paths*
+.. note::
+   Note that ``output_dir`` will be a folder named _output_dir_ under ``bids_dir``. Similar to the use of ``Singularity``, ``bids_dir`` should be provided as an *absolute path*
 
-(ex. "/Users/user1/Documents/DATA", "/home/user1/Documents/DATA" or "C:/Documents/DATA")
-
+For Advanced Users: Building the image from the scratch
+-------------------------------------------------------
+The image can be built using the ``Dockerfile`` found in the `repository <https://github.com/Infant-Neuromotor-Control-Lab/hbcd_motion_postproc>`_.
