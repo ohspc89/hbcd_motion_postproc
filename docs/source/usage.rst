@@ -42,9 +42,11 @@ limited. Use the following command to interactively run the container::
 
         docker run -it -v $bids_dir:/bids_dir \
         inclab/hbcd_motion_postproc:<version_num> \
-        /bids_dir /bids_dir/output_dir $analysis_level
+        /bids_dir /bids_dir/<output_dir_name> \
+        $analysis_level
 
-where ``version_num`` is the specific tag of the image you pulled.
+where ``version_num`` is the specific tag of the image you pulled, and
+``output_dir_name`` is the name of the folder where processing output will be stored.
 For both options, refer to :ref:`execute` to learn more.
 
 To see more specific information about how this tool expects
