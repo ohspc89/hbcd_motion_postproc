@@ -25,7 +25,7 @@ Execute HBCD-motion
 If you haven't already, set up HBCD-motion following instructions from this `page <https://hbcd-motion-postproc.readthedocs.io/en/latest/installation.html>`_. Then execute the processing pipeline with the test data using ``singularity``::
 
         bids_dir=/path/to/sample_hbcd (ex. /Users/joh/Downloads/sample_hbcd if working on a Mac)
-        bids_out=/path/to/output/folder (ex. /Users/joh/Downloads/HBCD_out)
+        bids_out=/path/to/output/folder (ex. /Users/joh/Downloads/HBCD_OUT)
         container=/path/to/container (ex. /Users/joh/Downloads/hbcd_motion_postproc_latest.sif)
         analysis_level=participant
         singularity run -B $bids_dir:/bids -B $bids_out:/out $container /bids /out $analysis_level --entropy_type SampEn
@@ -33,7 +33,7 @@ If you haven't already, set up HBCD-motion following instructions from this `pag
 If you use ``docker`` to process, 1) run the docker desktop, 2) open terminal and type the following::
 
       bids_dir=/path/to/sample_hbcd
-      output_dir_name=HBCD_out
+      output_dir_name=HBCD_OUT
       analysis_level=participant
       docker run -it -v $bids_dir:/bids_dir \
       inclab/hbcd_motion_postproc:<version_number> /bids_dir \
@@ -44,8 +44,7 @@ This is an example:
 .. image:: images/docker_test.png
    :width: 600
 
-Notice that the processing output will be saved in the folder named ``HBCD_out``, the value of ``output_dir_name``.
-This folder is placed inside ``bids_dir``.
+Notice that when running the pipeline using docker, the processing output will be saved in the folder named ``HBCD_OUT`` inside ``bids_dir``. In the example above, it is /Users/joh/Desktop/sample_hbcd/HBCD_OUT.
 
 If the processing pipeline works properly, you should see a screen like below:
 
@@ -54,7 +53,7 @@ If the processing pipeline works properly, you should see a screen like below:
 
 .. note::
 
-   I added ``--entropy_type SampEn`` to reduce the CPU load. Calculating ``FuzzEn`` requires a lot of computing power, so the process may terminate.
+   I added ``--entropy_type SampEn`` to reduce the CPU load. Calculating ``FuzzEn`` requires a lot of computing power, so the process may terminate. To shorten the process even more, add more arguments (ex. ``--pa_measure acceleration``, ``--pa_side L``, ``--entropy_measure pkacc``).
 
 Once the entire process is completed, you should see files are populated in your ``bids_out`` (or ``output_dir_name``) folder.
 
