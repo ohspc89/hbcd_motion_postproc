@@ -24,7 +24,7 @@ Execute HBCD-motion
 -------------------
 If you haven't already, set up HBCD-motion following instructions from this `page <https://hbcd-motion-postproc.readthedocs.io/en/latest/installation.html>`_. Then execute the processing pipeline with the test data using ``singularity``::
 
-        bids_dir=/path/to/sub-21135 (ex. /Users/joh/Downloads/sample_hbcd if working on a Mac)
+        bids_dir=/path/to/sample_hbcd (ex. /Users/joh/Downloads/sample_hbcd if working on a Mac)
         bids_out=/path/to/output/folder (ex. /Users/joh/Downloads/HBCD_out)
         container=/path/to/container (ex. /Users/joh/Downloads/hbcd_motion_postproc_latest.sif)
         analysis_level=participant
@@ -32,16 +32,20 @@ If you haven't already, set up HBCD-motion following instructions from this `pag
 
 If you use ``docker`` to process, 1) run the docker desktop, 2) open terminal and type the following::
 
-      bids_dir=/path/to/sub-21135
-      output_dir=/path/to/output/folder
+      bids_dir=/path/to/sample_hbcd
+      output_dir_name=HBCD_out
       analysis_level=participant
-      docker run -it -v $bids_dir:/bids_dir inclab/hbcd_motion_postproc:<version_number> /bids_dir $output_dir $analysis_level --entropy_type SampEn
+      docker run -it -v $bids_dir:/bids_dir \
+      inclab/hbcd_motion_postproc:<version_number> /bids_dir \
+      /bids_dir/$output_dir_name  $analysis_level --entropy_type SampEn
 
 This is an example:
 
 .. image:: images/docker_test.png
    :width: 600
 
+Notice that the processing output will be saved in the folder named ``HBCD_out``, the value of ``output_dir_name``.
+This folder is placed inside ``bids_dir``.
 
 If the processing pipeline works properly, you should see a screen like below:
 
@@ -52,7 +56,7 @@ If the processing pipeline works properly, you should see a screen like below:
 
    I added ``--entropy_type SampEn`` to reduce the CPU load. Calculating ``FuzzEn`` requires a lot of computing power, so the process may terminate.
 
-Once the entire process is completed, you should see files are populated in your ``bids_out`` folder.
+Once the entire process is completed, you should see files are populated in your ``bids_out`` (or ``output_dir_name``) folder.
 
 .. image:: images/sample_out.png
    :width: 600
