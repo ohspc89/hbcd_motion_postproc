@@ -84,6 +84,7 @@ If you are a Mac user, refer this `website <https://docs.cse.lehigh.edu/determin
 determine the architecture of your machine (Apple silicon vs. Intel chip).
 
 After installing ``Docker Desktop``, please go to **System Settings** and manually grant full disk access to Docker.
+If you don't see Docker from the list, click '+' button at the bottom left, select **Applications** and add Docker.
 
 .. image:: /images/macOS_docker_prereq1.png
    :width: 300
