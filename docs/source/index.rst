@@ -26,3 +26,4 @@ inertial measurement units (IMUs).
    testing
    inputs_formatting
    outputs
+   notes_on_data_release
