@@ -164,3 +164,13 @@ j] will be created only if data are not processed by the pipeline.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+Downloading from LASSO
+----------------------
+
+You can directly download the processed data outputs from LASSO.
+
+.. image:: images/lasso_derivative.png
+   :width: 600
+
+Labels are straightforward. ``motion (tsv)`` corresponds to b] and c]. ``motion (json)`` at the bottom refers to d] and e].
