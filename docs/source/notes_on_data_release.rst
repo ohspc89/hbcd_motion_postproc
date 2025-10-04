@@ -7,6 +7,9 @@ Notes on released data
 Here we summarize the *issues* (human errors and technical glitches) identified in the released movement sensor data for each release. The purpose of sharing these notes is to inform researchers who plan to conduct their own analyses using the released data.
 Release notes are available at `<https://docs.hbcdstudy.org>`_.
 
+Issue Types
+-----------
+
 A. Unexpected Movement Sensor Recording Onsets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 According to the Standard Operating Procedure (SOP) for movement sensor configuration, sensors are expected to start recording at 7 PT / 8 MT / 9 CT / 10 ET. However, several sensors were found to have started recording at times not designated by the SOP.
