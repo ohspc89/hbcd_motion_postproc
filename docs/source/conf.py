@@ -18,7 +18,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
-    'sphinx.ext.viewcode',
+    'sphinx.ext.viewcode',,
+    'sphinx_toolbox.collapse',
     'sphinxarg.ext'
 ]
 
