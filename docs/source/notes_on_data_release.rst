@@ -38,8 +38,10 @@ G. Sensor Measurement Variability Beyond Static Calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Although certain sensors were calibrated using the required datasets, residual measurement errors were observed. These errors may have been due to misalignment of the measurement axes or other factors not addressed by static calibration.
 
+Data Releases
+-------------
 
-.. collapse:: Release 1.0 (data released August, 2025)
+.. collapse:: **Release 1.0** (data released August, 2025)
 
     +-------------------+------------+------------+----------------------------------------------------------------------------------+
     | Subject ID        | Session ID | Issue(s)   | Note                                                                             |
